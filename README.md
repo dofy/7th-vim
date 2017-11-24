@@ -1,4 +1,4 @@
-# My .vimrc
+# Seven's vim config file.
 
 ```vim
 " plugins
