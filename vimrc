@@ -1,4 +1,5 @@
 " ===============================================================
+"
 "  _____ _   _             _           
 " |___  | |_| |__   __   _(_)_ __ ___  
 "    / /| __| '_ \  \ \ / / | '_ ` _ \ 
@@ -44,9 +45,16 @@ set hlsearch              " 高亮所有搜索结果  hls
 set cursorcolumn          " 高亮当前列        cuc
 set cursorline            " 高亮当前行        cul
 
+set scrolloff=5           " 屏幕顶/底部保持 5 行文本
 set laststatus=2          " 显示状态栏
 set noshowmode            " 不显示当前状态
 set showcmd               " 显示输入的命令
+set wildmenu              " Vim 命令行提示
+set nobackup              " 不生成临时文件
+set noswapfile            " 不生成 swap 文件
+set autoread              " 自动加载外部修改
+set autowrite             " 自动保存
+set confirm               " 弹出文件未保存确认
 
 filetype plugin indent on " 开启文件类型检测
 syntax   on               " 开启语法高亮
@@ -149,6 +157,7 @@ let g:easy_align_delimiters = {
 nnoremap <C-f> :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
 
 " airline
 let g:airline#extensions#tabline#enabled=1
@@ -158,3 +167,4 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+
