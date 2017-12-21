@@ -16,6 +16,8 @@
 
 ![7thvim][screen-shot-2]
 
+![7thvim][screen-shot-3]
+
 ## Install
 
 ```bash
@@ -55,6 +57,7 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
 
 [screen-shot-1]: https://user-images.githubusercontent.com/344197/34243545-3b92507e-e65c-11e7-8a26-2b763f4b291a.png
 [screen-shot-2]: https://user-images.githubusercontent.com/344197/34251542-72916ee2-e67b-11e7-8932-f377b121b60b.png
+[screen-shot-3]: https://user-images.githubusercontent.com/344197/34251767-1861bb24-e67c-11e7-8018-2942507de915.png
 [plug01]: https://github.com/scrooloose/nerdtree
 [plug02]: https://github.com/Xuyuanp/nerdtree-git-plugin
 [plug03]: https://github.com/vim-airline/vim-airline
