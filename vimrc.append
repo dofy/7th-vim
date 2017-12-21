@@ -1,0 +1,10 @@
+let g:airline_theme='dracula'
+colorscheme dracula
+
+
+" -------------------------------------------------
+" LOAD CUSTOMIZE SETTINGS
+" -------------------------------------------------
+if filereadable(expand($HOME . '/.vimrc.local'))
+  source $HOME/.vimrc.local
+endif
