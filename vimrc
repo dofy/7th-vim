@@ -89,6 +89,9 @@ imap <F10> <ESC> :NextColorScheme<CR>
 map  <F9>  :PreviousColorScheme<CR>
 imap <F9>  <ESC> :PreviousColorScheme<CR>
 
+" :W to save file by sudo
+command W w !sudo tee % > /dev/null
+
 
 " -------------------------------------------------
 " PLUGINS
@@ -107,6 +110,7 @@ Plug 'tpope/vim-surround'           " 自动增加、替换配对符
 Plug 'ctrlpvim/ctrlp.vim'           " 文件搜索
 Plug 'chxuan/change-colorscheme'    " 配色切换
 Plug 'docunext/closetag.vim'        " 自动关闭 HTML 标签
+Plug 'Valloric/YouCompleteMe'       " 代码自动完成
 
 Plug 'dracula/vim'                  " dracule 配色
 

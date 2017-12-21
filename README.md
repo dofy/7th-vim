@@ -21,13 +21,13 @@
 ## Install
 
 ```bash
-curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
+bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -i
 ```
 
 ## Update
 
 ```bash
-curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/update.sh | sh
+bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -u
 ```
 
 ## Plugins
@@ -45,7 +45,8 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/update.sh | sh
   - [ctrlpvim/ctrlp.vim][plug11] 文件搜索
   - [chxuan/change-colorscheme][plug12] 配色切换
   - [docunext/closetag.vim][plug13] 自动关闭 HTML 标签
-  - [dracula/vim][plug14] dracule 配色
+  - [Valloric/YouCompleteMe][plug14] 代码自动完成
+  - [dracula/vim][color] dracule 配色
 
 ## Key Mapping
 
@@ -65,6 +66,7 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/update.sh | sh
   - `<F8>` 关闭 Markdown 预览
   - `<F9>` 上一个配色方案
   - `<F10>` 下一个配色方案
+  - `:W` 用 `sudo` 命令保存文件
 
 [screen-shot-1]: https://user-images.githubusercontent.com/344197/34243545-3b92507e-e65c-11e7-8a26-2b763f4b291a.png
 [screen-shot-2]: https://user-images.githubusercontent.com/344197/34251542-72916ee2-e67b-11e7-8932-f377b121b60b.png
@@ -82,4 +84,5 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/update.sh | sh
 [plug11]: https://github.com/ctrlpvim/ctrlp.vim
 [plug12]: https://github.com/chxuan/change-colorscheme
 [plug13]: https://github.com/docunext/closetag.vim
-[plug14]: https://github.com/dracula/vim
+[plug14]: https://github.com/Valloric/YouCompleteMe
+[color]: https://github.com/dracula/vim
