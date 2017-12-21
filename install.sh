@@ -68,7 +68,7 @@ install_backup () {
   # remove and backup old files
   info '>>> Remove and backup old files ...'
   rm -rf ~/7th-vim-bak
-  mkdir ~/7th-vim-bak
+  mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
   mv ~/.vimrc.local ~/7th-vim-bak
 }
@@ -76,7 +76,7 @@ install_backup () {
 update_backup () {
   # remove and backup old files
   info '>>> Remove and backup old files ...'
-  mkdir ~/7th-vim-bak
+  mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
 }
 
