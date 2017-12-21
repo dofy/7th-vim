@@ -24,6 +24,12 @@
 curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
 ```
 
+## Update
+
+```bash
+curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/update.sh | sh
+```
+
 ## Plugins
 
   - [scrooloose/nerdtree][plug01] 树形目录
