@@ -51,15 +51,31 @@ logo () {
   warn '======================================'
 }
 
-backup () {
+help () {
+  echo 'install.sh -- Setup 7th Vim'
+  echo
+  echo '  Usage: install.sh <Options>'
+  echo
+  echo '  -i -- install'
+  echo '  -u -- update'
+  echo '  -h -- show help'
+  exit 0
+}
+
+install_backup () {
   # remove and backup old files
   info '>>> Remove and backup old files ...'
   rm -rf ~/7th-vim-bak
   mkdir ~/7th-vim-bak
-  #  mv ~/.vim ~/7th-vim-bak
-  #  mv ~/.viminfo ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
   mv ~/.vimrc.local ~/7th-vim-bak
+}
+
+update_backup () {
+  # remove and backup old files
+  info '>>> Remove and backup old files ...'
+  mkdir ~/7th-vim-bak
+  mv ~/.vimrc ~/7th-vim-bak
 }
 
 install () {
@@ -88,13 +104,48 @@ install () {
     >> ~/.vimrc
 }
 
-main () {
+update () {
+  # download .vimrc file
+  info '>>> Update .vimrc file ...'
+  curl -fLo ~/.vimrc \
+    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc
+}
+
+install_ycm () {
+  ~/.vim/bundle/YouCompleteMe/install.py --all
+}
+
+run_install () {
   logo
   succ '>>> Thanks for Install 7th-Vim'
-  backup
+  install_backup
   install
+  install_ycm 
   succ '>>> DONE!'
 }
 
-# start >>
-main
+run_update () {
+  logo
+  succ '>>> Thanks for Update 7th-Vim'
+  update_backup
+  update
+  install_ycm 
+  succ '>>> DONE!'
+}
+
+if [ $# -ne 1 ]; then
+  help
+fi
+
+while getopts ":iu" opts; do
+  case $opts in
+    i)
+      run_install;;
+    u)
+      run_update;;
+    :)
+      help;;
+    ?)
+      help;;
+  esac
+done
