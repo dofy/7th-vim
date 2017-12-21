@@ -15,7 +15,12 @@ function install() {
   # download .vimrc file
   echo '>>> Download .vimrc file ...'
   curl -fLo ~/.vimrc \
-    https://raw.githubusercontent.com/dofy/7th-vim/master/.vimrc
+    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc
+
+  # download .vimrc.local file
+  echo '>>> Download .vimrc.local file ...'
+  curl -fLo ~/.vimrc.local \
+    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.local
 
   # download vim-plug
   echo '>>> download vim-plug ...'
@@ -26,10 +31,10 @@ function install() {
   echo '>>> install plugins ...'
   vim +PlugInstall +qal
 
-  # download .vimrc.local file
-  echo '>>> Download .vimrc.local file ...'
-  curl -fLo ~/.vimrc.local \
-    https://raw.githubusercontent.com/dofy/7th-vim/master/.vimrc.local
+  # append settings
+  curl -f \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
+    >> ~/.vimrc
 }
 
 function main() {
