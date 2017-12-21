@@ -52,13 +52,15 @@ logo () {
 }
 
 help () {
-  echo 'install.sh -- Setup 7th Vim'
+  logo
   echo
-  echo '  Usage: install.sh <Options>'
+  echo 'Usage: install.sh <Options>'
   echo
+  echo 'Options:'
   echo '  -i -- install'
   echo '  -u -- update'
   echo '  -h -- show help'
+  echo
   exit 0
 }
 
@@ -78,12 +80,21 @@ update_backup () {
   mv ~/.vimrc ~/7th-vim-bak
 }
 
-install () {
+load_vimrc () {
   # download .vimrc file
   info '>>> Download .vimrc file ...'
   curl -fLo ~/.vimrc \
     https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc
+}
 
+append_settings () {
+  # append settings
+  curl -f \
+    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.append \
+    >> ~/.vimrc
+}
+
+install () {
   # download .vimrc.local file
   info '>>> Download .vimrc.local file ...'
   curl -fLo ~/.vimrc.local \
@@ -97,18 +108,12 @@ install () {
   # install plugins
   info '>>> Install plugins ...'
   vim +PlugUpdate +qal
-
-  # append settings
-  curl -f \
-    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.append \
-    >> ~/.vimrc
 }
 
 update () {
-  # download .vimrc file
-  info '>>> Update .vimrc file ...'
-  curl -fLo ~/.vimrc \
-    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc
+  # update plugins
+  info '>>> Update plugins ...'
+  vim +PlugClean! +PlugUpdate +qal
 }
 
 install_ycm () {
@@ -119,8 +124,10 @@ run_install () {
   logo
   succ '>>> Thanks for Install 7th-Vim'
   install_backup
+  load_vimrc
   install
   install_ycm 
+  append_settings
   succ '>>> DONE!'
 }
 
@@ -128,8 +135,9 @@ run_update () {
   logo
   succ '>>> Thanks for Update 7th-Vim'
   update_backup
+  load_vimrc
   update
-  install_ycm 
+  append_settings
   succ '>>> DONE!'
 }
 
