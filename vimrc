@@ -8,7 +8,7 @@
 " ===============================================================
 "
 " Author: Seven Yu <dofyyu@gmail.com>
-" Source: https://github.com/dofy/vimrc
+" Source: https://github.com/dofy/7th-vim
 " Version: 1.0.1
 " Created: 2017-11-24
 "

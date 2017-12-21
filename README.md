@@ -54,7 +54,7 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
   - `Ctrl F` 或 `<Leader>f` 开启 Nerdtree
 
 [screen-shot-1]: https://user-images.githubusercontent.com/344197/34243545-3b92507e-e65c-11e7-8a26-2b763f4b291a.png
-[screen-shot-2]: https://user-images.githubusercontent.com/344197/34243627-9fd4e600-e65c-11e7-99f2-f72a44242c62.png
+[screen-shot-2]: https://user-images.githubusercontent.com/344197/34251542-72916ee2-e67b-11e7-8932-f377b121b60b.png
 [plug01]: https://github.com/scrooloose/nerdtree
 [plug02]: https://github.com/Xuyuanp/nerdtree-git-plugin
 [plug03]: https://github.com/vim-airline/vim-airline
