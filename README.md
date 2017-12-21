@@ -33,6 +33,7 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
   - `iamcco/markdown-preview.vim` Markdown 预览
   - `junegunn/vim-slash` 优化搜索，移动清除搜索高亮
   - `gorodinskiy/vim-coloresque` 颜色预览
+  - `jiangmiao/auto-pairs` 符号自动补全
   - `dracula/vim` dracule 配色
 
 ## Key Mapping

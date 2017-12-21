@@ -94,6 +94,7 @@ Plug 'junegunn/vim-easy-align'      " 对齐插件，强迫症福音
 Plug 'iamcco/markdown-preview.vim'  " Markdown 预览
 Plug 'junegunn/vim-slash'           " 优化搜索，移动清除搜索高亮
 Plug 'gorodinskiy/vim-coloresque'   " 颜色预览
+Plug 'jiangmiao/auto-pairs'         " 符号自动补全
 Plug 'dracula/vim'                  " dracule 配色
 
 call plug#end()
@@ -141,9 +142,6 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:tender_airline=1
-
-let g:airline_theme='dracula'
-colorscheme dracula
 
 
 " -------------------------------------------------

@@ -3,3 +3,7 @@
 " ===============================================================
 
 "set wrap     " 自动折行
+
+" themes
+let g:airline_theme='dracula'
+colorscheme dracula
