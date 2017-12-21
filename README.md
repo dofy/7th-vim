@@ -30,43 +30,54 @@ bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh)
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -u
 ```
 
+## Customize
+
+```bash
+# Edit your customize config file
+vim ~/.vimrc.local
+# Reload .vimrc (in Vim)
+:source ~/.vimrc
+```
+
 ## Plugins
 
-  - [scrooloose/nerdtree][plug01] 树形目录
-  - [Xuyuanp/nerdtree-git-plugin][plug02] NerdTree 显示 git 状态
-  - [vim-airline/vim-airline][plug03] 美化 Vim 状态栏
-  - [vim-airline/vim-airline-themes][plug04] Airline Themes
-  - [junegunn/vim-easy-align][plug05] 对齐插件，强迫症福音
-  - [iamcco/markdown-preview.vim][plug06] Markdown 预览
-  - [junegunn/vim-slash][plug07] 优化搜索，移动清除搜索高亮
-  - [gorodinskiy/vim-coloresque][plug08] 颜色预览
-  - [jiangmiao/auto-pairs][plug09] 符号自动补全
-  - [tpope/vim-surround][plug10] 自动增加、替换配对符
-  - [ctrlpvim/ctrlp.vim][plug11] 文件搜索
-  - [chxuan/change-colorscheme][plug12] 配色切换
-  - [docunext/closetag.vim][plug13] 自动关闭 HTML 标签
-  - [Valloric/YouCompleteMe][plug14] 代码自动完成
-  - [dracula/vim][color] dracule 配色
+- [scrooloose/nerdtree][plug01] 树形目录
+- [Xuyuanp/nerdtree-git-plugin][plug02] NerdTree 显示 git 状态
+- [vim-airline/vim-airline][plug03] 美化 Vim 状态栏
+- [vim-airline/vim-airline-themes][plug04] Airline Themes
+- [junegunn/vim-easy-align][plug05] 对齐插件，强迫症福音
+- [iamcco/markdown-preview.vim][plug06] Markdown 预览
+- [junegunn/vim-slash][plug07] 优化搜索，移动清除搜索高亮
+- [gorodinskiy/vim-coloresque][plug08] 颜色预览
+- [jiangmiao/auto-pairs][plug09] 符号自动补全
+- [tpope/vim-surround][plug10] 自动增加、替换配对符
+- [ctrlpvim/ctrlp.vim][plug11] 文件搜索
+- [chxuan/change-colorscheme][plug12] 配色切换
+- [docunext/closetag.vim][plug13] 自动关闭 HTML 标签
+- [Valloric/YouCompleteMe][plug14] 代码自动完成
+- [dracula/vim][color] dracule 配色
 
 ## Key Mapping
 
-  - `,` **Leader Key**
-  - `Ctrl J` 跳转到下面的窗口
-  - `Ctrl K` 跳转到上面的窗口
-  - `Ctrl H` 跳转到左侧的窗口
-  - `Ctrl L` 跳转到右侧的窗口
-  - `Ctrl N` 切换 Buffer 列表中的文件
-  - `Ctrl P` 打开文件搜索模式
-  - `Shift H` 跳转到前一个 Tab
-  - `Shift L` 跳转到后一个 Tab
-  - `<Leader>t` 开启新 Tab
-  - `<Leader>w` 关闭当前 Tab
-  - `Ctrl F` 或 `<Leader>f` 开启 Nerdtree
-  - `<F7>` 开启 Markdown 预览
-  - `<F8>` 关闭 Markdown 预览
-  - `<F9>` 上一个配色方案
-  - `<F10>` 下一个配色方案
-  - `:W` 用 `sudo` 命令保存文件
+- `,` **Leader Key**
+- `Ctrl J` 跳转到下面的窗口
+- `Ctrl K` 跳转到上面的窗口
+- `Ctrl H` 跳转到左侧的窗口
+- `Ctrl L` 跳转到右侧的窗口
+- `Ctrl N` 切换 Buffer 列表中的文件
+- `Ctrl P` 打开文件搜索模式
+- `Shift H` 跳转到前一个 Tab
+- `Shift L` 跳转到后一个 Tab
+- `<Leader>t` 开启新 Tab
+- `<Leader>w` 关闭当前 Tab
+- `Ctrl F` 或 `<Leader>f` 开启 Nerdtree
+- `<F7>` 开启 Markdown 预览
+- `<F8>` 关闭 Markdown 预览
+- `<F9>` 上一个配色方案
+- `<F10>` 下一个配色方案
+- `:W` 用 `sudo` 命令保存文件
+
+**补充说明：插件相关功能及用法请参考对应网站**
 
 [screen-shot-1]: https://user-images.githubusercontent.com/344197/34243545-3b92507e-e65c-11e7-8a26-2b763f4b291a.png
 [screen-shot-2]: https://user-images.githubusercontent.com/344197/34251542-72916ee2-e67b-11e7-8932-f377b121b60b.png
