@@ -1,11 +1,9 @@
 " ===============================================================
-"
 "  _____ _   _             _           
 " |___  | |_| |__   __   _(_)_ __ ___  
 "    / /| __| '_ \  \ \ / / | '_ ` _ \ 
 "   / / | |_| | | |  \ V /| | | | | | |
 "  /_/   \__|_| |_|   \_/ |_|_| |_| |_|
-"
 "
 " ===============================================================
 "
@@ -98,6 +96,7 @@ Plug 'iamcco/markdown-preview.vim'  " Markdown 预览
 Plug 'junegunn/vim-slash'           " 优化搜索，移动清除搜索高亮
 Plug 'gorodinskiy/vim-coloresque'   " 颜色预览
 Plug 'jiangmiao/auto-pairs'         " 符号自动补全
+Plug 'tpope/vim-surround'           " 自动增加、替换配对符
 Plug 'dracula/vim'                  " dracule 配色
 
 call plug#end()
