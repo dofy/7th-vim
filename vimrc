@@ -45,9 +45,11 @@ set cursorcolumn          " 高亮当前列        cuc
 set cursorline            " 高亮当前行        cul
 
 set laststatus=2          " 显示状态栏
+set noshowmode            " 不显示当前状态
+set showcmd               " 显示输入的命令
 
 filetype plugin indent on " 开启文件类型检测
-syntax    on              " 开启语法高亮
+syntax   on               " 开启语法高亮
 
 set timeoutlen=500        " Time to wait for a command
 let mapleader=','         " Change the mapleader
@@ -64,7 +66,6 @@ nnoremap <C-L> <C-W>l
 
 " Buffer Jump
 nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
 
 " Prev Tab
 nnoremap <S-H> gT
@@ -82,6 +83,12 @@ imap <silent> <F7> <Plug>MarkdownPreview
 nmap <silent> <F8> <Plug>StopMarkdownPreview
 imap <silent> <F8> <Plug>StopMarkdownPreview
 
+" Change Color Scheme
+map  <F10> :NextColorScheme<CR>
+imap <F10> <ESC> :NextColorScheme<CR>
+map  <F9>  :PreviousColorScheme<CR>
+imap <F9>  <ESC> :PreviousColorScheme<CR>
+
 
 " -------------------------------------------------
 " PLUGINS
@@ -97,6 +104,10 @@ Plug 'junegunn/vim-slash'           " 优化搜索，移动清除搜索高亮
 Plug 'gorodinskiy/vim-coloresque'   " 颜色预览
 Plug 'jiangmiao/auto-pairs'         " 符号自动补全
 Plug 'tpope/vim-surround'           " 自动增加、替换配对符
+Plug 'ctrlpvim/ctrlp.vim'           " 文件搜索
+Plug 'chxuan/change-colorscheme'    " 配色切换
+Plug 'docunext/closetag.vim'        " 自动关闭 HTML 标签
+
 Plug 'dracula/vim'                  " dracule 配色
 
 call plug#end()
@@ -106,36 +117,36 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 let g:easy_align_delimiters = {
-\ '>': { 'pattern': '>>\|=>\|>' },
-\ '/': {
-\     'pattern':         '//\+\|/\*\|\*/',
-\     'delimiter_align': 'l',
-\     'ignore_groups':   ['!Comment'] },
-\ ']': {
-\     'pattern':       '[[\]]',
-\     'left_margin':   0,
-\     'right_margin':  0,
-\     'stick_to_left': 0
-\   },
-\ ')': {
-\     'pattern':       '[()]',
-\     'left_margin':   0,
-\     'right_margin':  0,
-\     'stick_to_left': 0
-\   },
-\ 'd': {
-\     'pattern':      ' \(\S\+\s*[;=]\)\@=',
-\     'left_margin':  0,
-\     'right_margin': 0
-\   }
-\ }
+      \ '>': { 'pattern': '>>\|=>\|>' },
+      \ '/': {
+      \     'pattern':         '//\+\|/\*\|\*/',
+      \     'delimiter_align': 'l',
+      \     'ignore_groups':   ['!Comment'] },
+      \ ']': {
+      \     'pattern':       '[[\]]',
+      \     'left_margin':   0,
+      \     'right_margin':  0,
+      \     'stick_to_left': 0
+      \   },
+      \ ')': {
+      \     'pattern':       '[()]',
+      \     'left_margin':   0,
+      \     'right_margin':  0,
+      \     'stick_to_left': 0
+      \   },
+      \ 'd': {
+      \     'pattern':      ' \(\S\+\s*[;=]\)\@=',
+      \     'left_margin':  0,
+      \     'right_margin': 0
+      \   }
+      \ }
 
 " NERDTree
 nnoremap <C-f> :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-" tender & airline
+" airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '$'
@@ -143,4 +154,3 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:tender_airline=1
