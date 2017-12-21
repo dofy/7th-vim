@@ -29,11 +29,11 @@ function install() {
 
   # install plugins
   echo '>>> install plugins ...'
-  vim +PlugInstall +qal
+  vim +PlugUpdate +qal
 
   # append settings
   curl -f \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
+    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.append \
     >> ~/.vimrc
 }
 
