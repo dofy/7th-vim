@@ -19,7 +19,6 @@
 ## Install
 
 ```bash
-cd ~
 curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
 ```
 
