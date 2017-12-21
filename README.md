@@ -20,7 +20,7 @@
 
 ```bash
 cd ~
-curl -L https://raw.githubusercontent.com/dofy/7thvim/master/install.sh | sh
+curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
 ```
 
 ## Plugins
