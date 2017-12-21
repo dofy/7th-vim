@@ -24,16 +24,17 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
 
 ## Plugins
 
-  - `scrooloose/nerdtree` 树形目录
-  - `Xuyuanp/nerdtree-git-plugin` NerdTree 显示 git 状态
-  - `vim-airline/vim-airline` 美化 Vim 状态栏
-  - `vim-airline/vim-airline-themes` Airline Themes
-  - `junegunn/vim-easy-align` 对齐插件，强迫症福音
-  - `iamcco/markdown-preview.vim` Markdown 预览
-  - `junegunn/vim-slash` 优化搜索，移动清除搜索高亮
-  - `gorodinskiy/vim-coloresque` 颜色预览
-  - `jiangmiao/auto-pairs` 符号自动补全
-  - `dracula/vim` dracule 配色
+  - [scrooloose/nerdtree][plug01] 树形目录
+  - [Xuyuanp/nerdtree-git-plugin][plug02] NerdTree 显示 git 状态
+  - [vim-airline/vim-airline][plug03] 美化 Vim 状态栏
+  - [vim-airline/vim-airline-themes][plug04] Airline Themes
+  - [junegunn/vim-easy-align][plug05] 对齐插件，强迫症福音
+  - [iamcco/markdown-preview.vim][plug06] Markdown 预览
+  - [junegunn/vim-slash][plug07] 优化搜索，移动清除搜索高亮
+  - [gorodinskiy/vim-coloresque][plug08] 颜色预览
+  - [jiangmiao/auto-pairs][plug09] 符号自动补全
+  - [tpope/vim-surround][plug10] 自动增加、替换配对符
+  - [dracula/vim][plug11] dracule 配色
 
 ## Key Mapping
 
@@ -54,3 +55,14 @@ curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh | sh
 
 [screen-shot-1]: https://user-images.githubusercontent.com/344197/34243545-3b92507e-e65c-11e7-8a26-2b763f4b291a.png
 [screen-shot-2]: https://user-images.githubusercontent.com/344197/34243627-9fd4e600-e65c-11e7-99f2-f72a44242c62.png
+[plug01]: https://github.com/scrooloose/nerdtree
+[plug02]: https://github.com/Xuyuanp/nerdtree-git-plugin
+[plug03]: https://github.com/vim-airline/vim-airline
+[plug04]: https://github.com/vim-airline/vim-airline-themes
+[plug05]: https://github.com/junegunn/vim-easy-align
+[plug06]: https://github.com/iamcco/markdown-preview.vim
+[plug07]: https://github.com/junegunn/vim-slash
+[plug08]: https://github.com/gorodinskiy/vim-coloresque
+[plug09]: https://github.com/jiangmiao/auto-pairs
+[plug10]: https://github.com/tpope/vim-surround
+[plug11]: https://github.com/dracula/vim
