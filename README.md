@@ -56,6 +56,7 @@ vim ~/.vimrc.local
 - [docunext/closetag.vim][plug13] 自动关闭 HTML 标签
 - [Valloric/YouCompleteMe][plug14] 代码自动完成
 - [ryanoasis/vim-devicons][plug15] Vim Dev Icons
+- [tpope/vim-repeat][plug16] 增强 . 命令
 - [dracula/vim][color] dracule 配色
 
 ## Key Mapping
@@ -98,4 +99,5 @@ vim ~/.vimrc.local
 [plug13]: https://github.com/docunext/closetag.vim
 [plug14]: https://github.com/Valloric/YouCompleteMe
 [plug15]: https://github.com/ryanoasis/vim-devicons
+[plug16]: https://github.com/tpope/vim-repeat
 [color]: https://github.com/dracula/vim

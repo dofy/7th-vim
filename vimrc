@@ -120,6 +120,7 @@ Plug 'chxuan/change-colorscheme'    " 配色切换
 Plug 'docunext/closetag.vim'        " 自动关闭 HTML 标签
 Plug 'Valloric/YouCompleteMe'       " 代码自动完成
 Plug 'ryanoasis/vim-devicons'       " Vim Dev Icons
+Plug 'tpope/vim-repeat'             " 增强 . 命令
 
 Plug 'dracula/vim'                  " dracule 配色
 
