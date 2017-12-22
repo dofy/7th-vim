@@ -18,6 +18,10 @@
 
 ![7thvim][screen-shot-3]
 
+![7thvim][screen-shot-4]
+
+![7thvim][screen-shot-5]
+
 ## Install
 
 ```bash
@@ -62,17 +66,21 @@ vim ~/.vimrc.local
 ## Key Mapping
 
 - `,` **Leader Key**
-- `Ctrl J` 跳转到下面的窗口
-- `Ctrl K` 跳转到上面的窗口
-- `Ctrl H` 跳转到左侧的窗口
-- `Ctrl L` 跳转到右侧的窗口
-- `Ctrl N` 切换 Buffer 列表中的文件
-- `Ctrl P` 打开文件搜索模式
-- `Shift H` 跳转到前一个 Tab
-- `Shift L` 跳转到后一个 Tab
+- `<Ctrl> A` INSERT 模式下移动光标到行首
+- `<Ctrl> E` INSERT 模式下移动光标到行尾
+- `<Ctrl> B` INSERT 模式下光标左移一位
+- `<Ctrl> F` INSERT 模式下光标右移一位
+- `<Ctrl> J` 跳转到下面的窗口
+- `<Ctrl> K` 跳转到上面的窗口
+- `<Ctrl> H` 跳转到左侧的窗口
+- `<Ctrl> L` 跳转到右侧的窗口
+- `<Ctrl> N` 切换 Buffer 列表中的文件
+- `<Ctrl> P` 打开文件搜索模式
+- `<Shift> H` 跳转到前一个 Tab
+- `<Shift> L` 跳转到后一个 Tab
 - `<Leader>t` 开启新 Tab
 - `<Leader>w` 关闭当前 Tab
-- `Ctrl F` 或 `<Leader>f` 开启 Nerdtree
+- `<Ctrl> F` 或 `<Leader>f` 开启 Nerdtree
 - `<F7>` 开启 Markdown 预览
 - `<F8>` 关闭 Markdown 预览
 - `<F9>` 上一个配色方案
@@ -81,9 +89,12 @@ vim ~/.vimrc.local
 
 **补充说明：插件相关功能及用法请参考对应网站**
 
-[screen-shot-1]: https://user-images.githubusercontent.com/344197/34243545-3b92507e-e65c-11e7-8a26-2b763f4b291a.png
-[screen-shot-2]: https://user-images.githubusercontent.com/344197/34251542-72916ee2-e67b-11e7-8932-f377b121b60b.png
-[screen-shot-3]: https://user-images.githubusercontent.com/344197/34251767-1861bb24-e67c-11e7-8018-2942507de915.png
+
+[screen-shot-1]: https://user-images.githubusercontent.com/344197/34291096-a2814680-e735-11e7-910d-b1eefae0b990.png
+[screen-shot-2]: https://user-images.githubusercontent.com/344197/34291098-a32023d6-e735-11e7-9fd5-285b4939c1c8.png
+[screen-shot-3]: https://user-images.githubusercontent.com/344197/34291097-a2da1aa8-e735-11e7-9a5e-7629a6507663.png
+[screen-shot-4]: https://user-images.githubusercontent.com/344197/34291099-a37b0102-e735-11e7-9ee4-e03b7f180af0.png
+[screen-shot-5]: https://user-images.githubusercontent.com/344197/34291095-a2399ca4-e735-11e7-9883-6b1a27364fe4.png
 [plug01]: https://github.com/scrooloose/nerdtree
 [plug02]: https://github.com/Xuyuanp/nerdtree-git-plugin
 [plug03]: https://github.com/vim-airline/vim-airline

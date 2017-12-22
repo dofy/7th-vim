@@ -82,14 +82,11 @@ augroup end
 " -------------------------------------------------
 " KEY MAPPING
 " -------------------------------------------------
-" Use Ctrl-C exit insert mode
-imap <Esc> <C-c>
-
 " Shortcut for Moving in INSERT mode
-imap <C-a> <Home>
-imap <C-e> <End>
-imap <C-b> <Left>
-imap <C-f> <Right>
+imap <C-A> <Home>
+imap <C-E> <End>
+imap <C-B> <Left>
+imap <C-F> <Right>
 
 " Navigation Between Windows
 nnoremap <C-J> <C-W>j
@@ -118,9 +115,9 @@ imap <silent> <F8> <Plug>StopMarkdownPreview
 
 " Change Color Scheme
 map  <F10> :NextColorScheme<CR>
-imap <F10> <ESC> :NextColorScheme<CR>
+imap <F10> <Esc> :NextColorScheme<CR>
 map  <F9>  :PreviousColorScheme<CR>
-imap <F9>  <ESC> :PreviousColorScheme<CR>
+imap <F9>  <Esc> :PreviousColorScheme<CR>
 
 " :W to save file by sudo
 command W w !sudo tee % > /dev/null
@@ -184,6 +181,7 @@ nnoremap <C-F> :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
 let NERDTreeChDirMode=2
 let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
 let NERDTreeShowLineNumbers=1
 
 " airline
