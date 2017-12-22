@@ -55,6 +55,7 @@ vim ~/.vimrc.local
 - [chxuan/change-colorscheme][plug12] 配色切换
 - [docunext/closetag.vim][plug13] 自动关闭 HTML 标签
 - [Valloric/YouCompleteMe][plug14] 代码自动完成
+- [ryanoasis/vim-devicons][plug15] Vim Dev Icons
 - [dracula/vim][color] dracule 配色
 
 ## Key Mapping
@@ -96,4 +97,5 @@ vim ~/.vimrc.local
 [plug12]: https://github.com/chxuan/change-colorscheme
 [plug13]: https://github.com/docunext/closetag.vim
 [plug14]: https://github.com/Valloric/YouCompleteMe
+[plug15]: https://github.com/ryanoasis/vim-devicons
 [color]: https://github.com/dracula/vim
