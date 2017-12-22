@@ -14,6 +14,7 @@
 "
 " Sections:
 "   - Common Settings
+"   - Extend Settings
 "   - Key Mapping
 "   - Plugins
 "   - Load Customize Settings
@@ -25,6 +26,12 @@
 " -------------------------------------------------
 " COMMON SETTINGS
 " -------------------------------------------------
+set      nocompatible
+filetype plugin indent on " 开启文件类型检测
+syntax   on               " 开启语法高亮
+
+"set shell=/bin/bash
+
 set number                " 显示行号          nu
 set relativenumber        " 显示相对行号      rnu
 set ruler                 " 显示标尺信息
@@ -35,6 +42,8 @@ set smartindent           " 智能缩进          si
 set softtabstop=2         " Tab 缩进单位      sts
 set shiftwidth=2          " 自动缩进单位      sw
 set encoding=utf-8        " UTF-8 编码
+set t_Co=256              " 开启 256 色（若终端支持）
+set background=dark
 set nowrap                " 禁止折行
 
 set ignorecase            " 搜索忽略大小写    ic
@@ -55,18 +64,33 @@ set autoread              " 自动加载外部修改
 set autowrite             " 自动保存
 set confirm               " 弹出文件未保存确认
 
-"set shell=/bin/bash
-
 set timeoutlen=500        " Time to wait for a command
 let mapleader=','         " Change the mapleader
 
-filetype plugin indent on " 开启文件类型检测
-syntax   on               " 开启语法高亮
+
+" -------------------------------------------------
+" EXTEND SETTINGS
+" -------------------------------------------------
+"  Close relative number in INSERT mode
+augroup relative_numbser
+  autocmd!
+  autocmd InsertEnter * :set norelativenumber
+  autocmd InsertLeave * :set relativenumber
+augroup end
 
 
 " -------------------------------------------------
 " KEY MAPPING
 " -------------------------------------------------
+" Use Ctrl-C exit insert mode
+imap <Esc> <C-c>
+
+" Shortcut for Moving in INSERT mode
+imap <C-a> <Home>
+imap <C-e> <End>
+imap <C-b> <Left>
+imap <C-f> <Right>
+
 " Navigation Between Windows
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
@@ -156,7 +180,7 @@ let g:easy_align_delimiters = {
       \ }
 
 " NERDTree
-nnoremap <C-f> :NERDTreeToggle<CR>
+nnoremap <C-F> :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
 let NERDTreeChDirMode=2
 let NERDTreeShowHidden=1
