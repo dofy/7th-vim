@@ -3,17 +3,17 @@
 # prints colored text
 print_style () {
 
-    if   [ "$2" == "info" ] ; then COLOR="96m";
-    elif [ "$2" == "succ" ] ; then COLOR="92m";
-    elif [ "$2" == "warn" ] ; then COLOR="95m";
-    elif [ "$2" == "error" ] ; then COLOR="91m";
-    else color COLOR="0m"; #default
-    fi
+  if   [ "$2" == "info" ] ; then COLOR="96m";
+  elif [ "$2" == "succ" ] ; then COLOR="92m";
+  elif [ "$2" == "warn" ] ; then COLOR="95m";
+  elif [ "$2" == "error" ] ; then COLOR="91m";
+  else COLOR="0m"; #default color
+  fi
 
-    STARTCOLOR="\e[$COLOR";
-    ENDCOLOR="\e[0m";
+  STARTCOLOR="\e[$COLOR";
+  ENDCOLOR="\e[0m";
 
-    printf "$STARTCOLOR%b$ENDCOLOR" "$1";
+  printf "$STARTCOLOR%b$ENDCOLOR" "$1";
 }
 
 info () {
@@ -32,6 +32,10 @@ error () {
   print_style "$1" "error"
 }
 
+normal () {
+  print_style "$1" "-"
+}
+
 die () {
   error "$1" ; exit 1
 }
@@ -48,26 +52,22 @@ logo () {
 
 help () {
   logo
-  echo
+  echo 
   echo 'Usage: install.sh <Options>'
-  echo
+  echo 
   echo 'Options:'
   echo '  -i -- install'
   echo '  -u -- update'
-  echo '  -c -- check denpendent'
+  echo '  -c -- check dependent'
   echo '  -h -- show help'
   echo
   exit 0
 }
 
-# TODO:
-#
-# - check git, python, cmake
-# - install fonts
-
+# check dependent
 check () {
   E=0
-  info 'Checking Git ...'
+  info '\n>> Checking Git ...'
   if which git > /dev/null ; then
     succ '\t OK!\n'
   else
@@ -76,7 +76,7 @@ check () {
     how_to git
   fi
 
-  info 'Checking Python ...'
+  info '\n>> Checking Python ...'
   if which python > /dev/null ; then
     succ '\t OK!\n'
   else
@@ -85,8 +85,8 @@ check () {
     how_to python
   fi
 
-  info 'Checking cmake ...'
-  if which cmak > /dev/null ; then
+  info '\n>> Checking cmake ...'
+  if which cmake > /dev/null ; then
     succ '\t OK!\n'
   else
     E=1
@@ -95,47 +95,72 @@ check () {
   fi
 
   if [ $E -ne 0 ] ; then
-    warn '7th-Vim '
+    warn '\n>>> The 7th-Vim '
     die 'install failed!\n'
   fi
 }
 
 how_to () {
   if [ $1 == git ] ; then
-    echo 'How to install Git'
-    echo '- for macOS'
-    echo '- for Linux'
+    warn 'How to install Git:\n'
+    info '- for macOS, refer to the following url:\n'
+    normal 'https://git-scm.com/book/en/v2/Getting-Started-Installing-Git\n'
+    info '- for Ubuntu\n'
+    info '$ ' ; normal 'sudo apt-get install -y git-all\n'
+    info '- for CentOS\n'
+    info '$ ' ; normal 'sudo yum install -y git-all\n'
   elif [ $1 == python ] ; then
-    echo 'How to install Python'
-    echo '- for macOS'
-    echo '- for Linux'
+    warn 'How to install Python:\n'
+    info '- for Ubuntu\n'
+    info '$ ' ; normal 'sudo apt-get install -y python-dev python3-dev\n'
+    info '- for CentOS\n'
+    info '$ ' ; normal 'sudo yum install -y python-devel python3-devel\n'
   elif [ $1 == cmake ] ; then
-    echo 'How to install cmake'
-    echo '- for macOS'
-    echo '- for Linux'
+    warn 'How to install cmake:\n'
+    info '- for macOS\n'
+    info '$ ' ; normal 'brew install gcc cmake\n'
+    info '- for Ubuntu\n'
+    info '$ ' ; normal 'sudo apt-get install -y cmake\n'
+    info '- for CentOS\n'
+    info '$ ' ; normal 'sudo yum install -y automake gcc gcc-c++ cmake\n'
   fi
 }
 
 install_backup () {
   # remove and backup old files
-  info '>>> Remove and backup old files ...\n'
+  info '\n>>> Remove and backup old files ...\n'
   mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
   mv ~/.vimrc.local ~/7th-vim-bak
+  mv ~/.vimrc.language ~/7th-vim-bak
 }
 
 update_backup () {
   # remove and backup old files
-  info '>>> Remove and backup old files ...\n'
+  info '\n>>> Remove and backup old files ...\n'
   mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
 }
 
 load_vimrc () {
   # download .vimrc file
-  info '>>> Download .vimrc file ...\n'
+  info '\n>>> Download .vimrc file ...\n'
   curl -fLo ~/.vimrc \
     https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc
+
+  # download .vimrc.language file
+  if [ ! -f ~/.vimrc.language ] ; then
+    info '\n>>> Download .vimrc.language file ...\n'
+    curl -fLo ~/.vimrc.language \
+      https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.language
+  fi
+
+  # download .vimrc.local file
+  if [ ! -f ~/.vimrc.local ] ; then
+    info '\n>>> Download .vimrc.local file ...\n'
+    curl -fLo ~/.vimrc.local \
+      https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.local
+  fi
 }
 
 append_settings () {
@@ -145,52 +170,48 @@ append_settings () {
     >> ~/.vimrc
 }
 
-install () {
-  # download .vimrc.local file
-  info '>>> Download .vimrc.local file ...\n'
-  curl -fLo ~/.vimrc.local \
-    https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.local
-
+install_plugin () {
   # download vim-plug
-  info '>>> Download vim-plug ...\n'
+  info '\n>>> Download vim-plug ...\n'
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   # install plugins
-  info '>>> Install plugins ...\n'
+  info '\n>>> Install plugins ...\n'
   vim +PlugClean! +PlugUpdate +qal
 }
 
-update () {
+update_plugin () {
   # update plugins
-  info '>>> Update plugins ...\n'
+  info '\n>>> Update plugins ...\n'
   vim +PlugClean! +PlugUpdate +qal
 }
 
 install_ycm () {
-  info '>>> Install YouCompleteMe ...\n'
+  info '\n>>> Install YouCompleteMe ...\n'
   ~/.vim/bundle/YouCompleteMe/install.py --all
 }
 
 run_install () {
   logo
-  succ '>>> Thanks for Install 7th-Vim\n'
+  succ '\n>>> Thanks for Install The 7th-Vim\n'
+  check
   install_backup
   load_vimrc
-  install
+  install_plugin
   install_ycm 
   append_settings
-  succ '>>> DONE!\n'
+  succ '\n>>> DONE!\n'
 }
 
 run_update () {
   logo
-  succ '>>> Thanks for Update 7th-Vim\n'
+  succ '\n>>> Thanks for Update The 7th-Vim\n'
   update_backup
   load_vimrc
   append_settings
-  update
-  succ '>>> DONE!\n'
+  update_plugin
+  succ '\n>>> DONE!\n'
 }
 
 if [ $# -ne 1 ]; then

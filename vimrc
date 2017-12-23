@@ -83,10 +83,12 @@ augroup end
 " -------------------------------------------------
 " LANGUAGE SUPPORTS
 " -------------------------------------------------
-"
-"  TODO:
-"
-"  - html, css, javascript, python, c/c++, go
+" Support language group
+let g:language_group = ['markdown', 'html', 'css', 'js', 'php', 'python', 'c', 'go']
+
+if filereadable(expand($HOME . '/.vimrc.language'))
+  source $HOME/.vimrc.language
+endif
 
 
 " -------------------------------------------------
@@ -117,12 +119,6 @@ nnoremap <Leader>t :tabnew<CR>
 " Close Tab
 nnoremap <Leader>w :tabclose<CR>
 
-" Markdown Preview
-nmap <silent> <F7> <Plug>MarkdownPreview
-imap <silent> <F7> <Plug>MarkdownPreview
-nmap <silent> <F8> <Plug>StopMarkdownPreview
-imap <silent> <F8> <Plug>StopMarkdownPreview
-
 " Change Color Scheme
 map  <F10> :NextColorScheme<CR>
 imap <F10> <Esc> :NextColorScheme<CR>
@@ -131,6 +127,14 @@ imap <F9>  <Esc> :PreviousColorScheme<CR>
 
 " :W to save file by sudo
 command W w !sudo tee % > /dev/null
+
+" Markdown Preview
+if count(g:language_group, 'markdown')
+  nmap <silent> <F7> <Plug>MarkdownPreview
+  imap <silent> <F7> <Plug>MarkdownPreview
+  nmap <silent> <F8> <Plug>StopMarkdownPreview
+  imap <silent> <F8> <Plug>StopMarkdownPreview
+endif
 
 
 " -------------------------------------------------
@@ -141,7 +145,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'} " Markdown 预览
 Plug 'junegunn/vim-easy-align'                          " 对齐插件，强迫症福音
 Plug 'junegunn/vim-slash'                               " 优化搜索，移动清除搜索高亮
 Plug 'gorodinskiy/vim-coloresque'                       " 颜色预览
@@ -149,11 +152,45 @@ Plug 'jiangmiao/auto-pairs'                             " 符号自动补全
 Plug 'tpope/vim-surround'                               " 自动增加、替换配对符
 Plug 'ctrlpvim/ctrlp.vim'                               " 文件搜索
 Plug 'chxuan/change-colorscheme'                        " 配色切换
-Plug 'docunext/closetag.vim'                            " 自动关闭 HTML 标签
 Plug 'Valloric/YouCompleteMe'                           " 代码自动完成
 Plug 'ryanoasis/vim-devicons'                           " Vim Dev Icons
 Plug 'tpope/vim-repeat'                                 " 增强 . 命令
 Plug 'dracula/vim'                                      " dracule 配色
+
+" Plugins for language
+" markdown
+if count(g:language_group, 'markdown')
+  Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'} " Markdown 预览
+endif
+
+" html
+if count(g:language_group, 'html')
+  Plug 'docunext/closetag.vim' " 自动关闭 HTML 标签
+endif
+
+" css
+if count(g:language_group, 'css')
+endif
+
+" js
+if count(g:language_group, 'js')
+endif
+
+" php
+if count(g:language_group, 'php')
+endif
+
+" python
+if count(g:language_group, 'python')
+endif
+
+" c
+if count(g:language_group, 'c')
+endif
+
+" go
+if count(g:language_group, 'go')
+endif
 
 call plug#end()
 
