@@ -15,6 +15,7 @@
 " Sections:
 "   - Common Settings
 "   - Extend Settings
+"   - Language Supports
 "   - Key Mapping
 "   - Plugins
 "   - Load Customize Settings
@@ -77,6 +78,15 @@ augroup relative_numbser
   autocmd InsertEnter * :set norelativenumber
   autocmd InsertLeave * :set relativenumber
 augroup end
+
+
+" -------------------------------------------------
+" LANGUAGE SUPPORTS
+" -------------------------------------------------
+"
+"  TODO:
+"
+"  - html, css, javascript, python, c/c++, go
 
 
 " -------------------------------------------------

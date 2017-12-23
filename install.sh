@@ -59,15 +59,24 @@ help () {
   echo 'Options:'
   echo '  -i -- install'
   echo '  -u -- update'
+  echo '  -c -- check denpendent'
   echo '  -h -- show help'
   echo
   exit 0
 }
 
+# TODO:
+#
+# - check git, python, cmake
+# - install fonts
+
+check () {
+
+}
+
 install_backup () {
   # remove and backup old files
   info '>>> Remove and backup old files ...'
-  rm -rf ~/7th-vim-bak
   mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
   mv ~/.vimrc.local ~/7th-vim-bak
@@ -145,12 +154,14 @@ if [ $# -ne 1 ]; then
   help
 fi
 
-while getopts ":iu" opts; do
+while getopts ":iuc" opts; do
   case $opts in
     i)
       run_install;;
     u)
       run_update;;
+    c)
+      check;;
     :)
       help;;
     ?)
