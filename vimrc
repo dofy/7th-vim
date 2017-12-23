@@ -83,9 +83,6 @@ augroup end
 " -------------------------------------------------
 " LANGUAGE SUPPORTS
 " -------------------------------------------------
-" Support language group
-let g:language_group = ['markdown', 'html', 'css', 'js', 'php', 'python', 'c', 'go']
-
 if filereadable(expand($HOME . '/.vimrc.language'))
   source $HOME/.vimrc.language
 endif

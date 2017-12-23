@@ -64,6 +64,21 @@ help () {
   exit 0
 }
 
+language_support_info () {
+  info '\n-------------------------------------------------------------------\n'
+  info 'Edit ' ; succ '~/.vimrc.language' ; info ' to enable/disable language support you need.\n'
+  info 'Supported languages:\n'
+  normal '  - markdown\n'
+  #normal '  - html\n'
+  #normal '  - css\n'
+  #normal '  - js\n'
+  #normal '  - php\n'
+  #normal '  - python\n'
+  #normal '  - c/c++\n'
+  #normal '  - go\n'
+  info '-------------------------------------------------------------------\n'
+}
+
 # check dependent
 check () {
   E=0
@@ -201,7 +216,8 @@ run_install () {
   install_plugin
   install_ycm 
   append_settings
-  succ '\n>>> DONE!\n'
+  language_support_info
+  succ '\n>>> DONE!\n\n'
 }
 
 run_update () {
@@ -211,7 +227,8 @@ run_update () {
   load_vimrc
   append_settings
   update_plugin
-  succ '\n>>> DONE!\n'
+  language_support_info
+  succ '\n>>> DONE!\n\n'
 }
 
 if [ $# -ne 1 ]; then
