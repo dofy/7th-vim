@@ -37,9 +37,13 @@ bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh)
 ## Customize
 
 ```bash
+# Edit the following file to enable/disable language support you need
+vim ~/.vimrc.language
+
 # Edit your customize config file
 vim ~/.vimrc.local
-# Reload .vimrc (in Vim)
+
+# Reload .vimrc (IN VIM!!!)
 :source ~/.vimrc
 ```
 
