@@ -10,6 +10,8 @@
 
 工作中使用的一套 Vim 配置方案。 安装简单、轻量、易用、高可配置性。
 
+**Telegram Group:** [`https://t.me/The7thVim`](https://t.me/The7thVim)
+
 ## Screenshot
 
 ![7thvim][screen-shot-1]
