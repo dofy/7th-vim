@@ -74,9 +74,9 @@ language_support_info () {
   normal '  - js\n'
   normal '  - json\n'
   normal '  - php\n'
-  #normal '  - python\n'
+  normal '  - python\n'
   #normal '  - c/c++\n'
-  #normal '  - go\n'
+  normal '  - go\n'
   info '-------------------------------------------------------------------\n'
 }
 

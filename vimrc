@@ -142,18 +142,21 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/vim-easy-align'                          " 对齐插件，强迫症福音
-Plug 'junegunn/vim-slash'                               " 优化搜索，移动清除搜索高亮
-Plug 'gorodinskiy/vim-coloresque'                       " 颜色预览
-Plug 'jiangmiao/auto-pairs'                             " 符号自动补全
-Plug 'tpope/vim-surround'                               " 自动增加、替换配对符
-Plug 'ctrlpvim/ctrlp.vim'                               " 文件搜索
-Plug 'chxuan/change-colorscheme'                        " 配色切换
-Plug 'Valloric/YouCompleteMe'                           " 代码自动完成
-Plug 'ryanoasis/vim-devicons'                           " Vim Dev Icons
-Plug 'tpope/vim-repeat'                                 " 增强 . 命令
-Plug 'dracula/vim'                                      " dracule 配色
+Plug 'mhinz/vim-startify'         " 启动页
+Plug 'roman/golden-ratio'         " 自动控制窗口大小
+Plug 'junegunn/vim-easy-align'    " 对齐插件，强迫症福音
+Plug 'junegunn/vim-slash'         " 优化搜索，移动清除搜索高亮
+Plug 'gorodinskiy/vim-coloresque' " 颜色预览
+Plug 'jiangmiao/auto-pairs'       " 符号自动补全
+Plug 'tpope/vim-surround'         " 自动增加、替换配对符
+Plug 'ctrlpvim/ctrlp.vim'         " 文件搜索
+Plug 'chxuan/change-colorscheme'  " 配色切换
+Plug 'Valloric/YouCompleteMe'     " 代码自动完成
+Plug 'ryanoasis/vim-devicons'     " Vim Dev Icons
+Plug 'tpope/vim-repeat'           " 增强 . 命令
+Plug 'dracula/vim'                " dracule 配色
 
 " Plugins for language
 " markdown
@@ -201,6 +204,7 @@ endif
 
 " python
 if count(g:language_group, 'python')
+  Plug 'hdima/python-syntax'
 endif
 
 " c
@@ -209,6 +213,7 @@ endif
 
 " go
 if count(g:language_group, 'go')
+  Plug 'fatih/vim-go', { 'for': 'go' } " Golang
 endif
 
 call plug#end()
@@ -249,6 +254,12 @@ let NERDTreeChDirMode=2
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowLineNumbers=1
+let g:NERDTreeWinSize=35
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 
 " airline
 let g:airline#extensions#tabline#enabled=1

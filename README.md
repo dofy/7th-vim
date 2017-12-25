@@ -77,6 +77,8 @@ vim ~/.vimrc.local
 - [Valloric/YouCompleteMe][plug14] 代码自动完成
 - [ryanoasis/vim-devicons][plug15] Vim Dev Icons
 - [tpope/vim-repeat][plug16] 增强 . 命令
+- [mhinz/vim-startify][plug17] 启动页
+- [roman/golden-ratio][plug18] 自动控制窗口大小
 - [dracula/vim][color] dracule 配色
 
 > **补充说明：** 插件相关功能及用法请参考对应网站
@@ -136,6 +138,8 @@ vim ~/.vimrc.local
 [plug14]: https://github.com/Valloric/YouCompleteMe
 [plug15]: https://github.com/ryanoasis/vim-devicons
 [plug16]: https://github.com/tpope/vim-repeat
+[plug17]: https://github.com/mhinz/vim-startify
+[plug18]: https://github.com/roman/golden-ratio
 [color]: https://github.com/dracula/vim
 [issues2]: https://github.com/dofy/7th-vim/issues/2
 [issues3]: https://github.com/dofy/7th-vim/issues/3
