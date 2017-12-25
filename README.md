@@ -12,6 +12,16 @@
 
 **Telegram Group:** [`https://t.me/The7thVim`](https://t.me/The7thVim)
 
+## Index
+
+- [Screenshot](#screenshot)
+- [Install](#install)
+- [Update](#update)
+- [Customize](#customize)
+- [Plugins](#plugins)
+- [Key Mapping](#key-mapping)
+- [Q&A](#qa)
+
 ## Screenshot
 
 ![7thvim][screen-shot-1]
