@@ -30,6 +30,7 @@
 set      nocompatible
 filetype plugin indent on " 开启文件类型检测
 syntax   on               " 开启语法高亮
+set      foldmethod=syntax
 
 "set shell=/bin/bash
 
@@ -157,7 +158,10 @@ Plug 'dracula/vim'                                      " dracule 配色
 " Plugins for language
 " markdown
 if count(g:language_group, 'markdown')
+  Plug 'plasticboy/vim-markdown'                          " Markdown 代码高亮，自动格式化
   Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'} " Markdown 预览
+
+  let g:vim_markdown_new_list_item_indent = 2
 endif
 
 " html
@@ -167,14 +171,32 @@ endif
 
 " css
 if count(g:language_group, 'css')
+  Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
+
+  augroup VimCSS3Syntax
+    autocmd!
+    autocmd FileType css setlocal iskeyword+=-
+  augroup END
 endif
 
 " js
 if count(g:language_group, 'js')
+  Plug 'pangloss/vim-javascript'
+
+  let g:javascript_plugin_jsdoc = 1
+endif
+
+" json
+if count(g:language_group, 'json')
+  Plug 'elzr/vim-json' " json 语法检查
 endif
 
 " php
 if count(g:language_group, 'php')
+  Plug 'mageekguy/php.vim', {'for': 'php'}
+  Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
+  Plug 'vim-scripts/phpfolding.vim', {'for': 'php'}
+  Plug '2072/PHP-Indenting-for-VIm', {'for': 'php'}
 endif
 
 " python
