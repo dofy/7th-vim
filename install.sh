@@ -65,11 +65,11 @@ help () {
 }
 
 language_support_info () {
-  info '\n-------------------------------------------------------------------\n'
+  info '-------------------------------------------------------------------\n'
   info 'Edit ' ; succ '~/.vimrc.language' ; info ' to enable/disable language support you need.\n'
   info 'Supported languages:\n'
   normal '  - markdown\n'
-  #normal '  - html\n'
+  normal '  - html\n'
   #normal '  - css\n'
   #normal '  - js\n'
   #normal '  - php\n'
@@ -82,7 +82,7 @@ language_support_info () {
 # check dependent
 check () {
   E=0
-  info '\n>> Checking Git ...'
+  info '>> Checking Git ...'
   if which git > /dev/null ; then
     succ '\t OK!\n'
   else
@@ -91,7 +91,7 @@ check () {
     how_to git
   fi
 
-  info '\n>> Checking Python ...'
+  info '>> Checking Python ...'
   if which python > /dev/null ; then
     succ '\t OK!\n'
   else
@@ -100,7 +100,7 @@ check () {
     how_to python
   fi
 
-  info '\n>> Checking cmake ...'
+  info '>> Checking cmake ...'
   if which cmake > /dev/null ; then
     succ '\t OK!\n'
   else
@@ -110,7 +110,7 @@ check () {
   fi
 
   if [ $E -ne 0 ] ; then
-    warn '\n>>> The 7th-Vim '
+    warn '>>> The 7th-Vim '
     die 'install failed!\n'
   fi
 }
@@ -143,7 +143,7 @@ how_to () {
 
 install_backup () {
   # remove and backup old files
-  info '\n>>> Remove and backup old files ...\n'
+  info '>>> Remove and backup old files ...\n'
   mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
   mv ~/.vimrc.local ~/7th-vim-bak
@@ -152,27 +152,27 @@ install_backup () {
 
 update_backup () {
   # remove and backup old files
-  info '\n>>> Remove and backup old files ...\n'
+  info '>>> Remove and backup old files ...\n'
   mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
 }
 
 load_vimrc () {
   # download .vimrc file
-  info '\n>>> Download .vimrc file ...\n'
+  info '>>> Download .vimrc file ...\n'
   curl -fLo ~/.vimrc \
     https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc
 
   # download .vimrc.language file
   if [ ! -f ~/.vimrc.language ] ; then
-    info '\n>>> Download .vimrc.language file ...\n'
+    info '>>> Download .vimrc.language file ...\n'
     curl -fLo ~/.vimrc.language \
       https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.language
   fi
 
   # download .vimrc.local file
   if [ ! -f ~/.vimrc.local ] ; then
-    info '\n>>> Download .vimrc.local file ...\n'
+    info '>>> Download .vimrc.local file ...\n'
     curl -fLo ~/.vimrc.local \
       https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.local
   fi
@@ -187,29 +187,29 @@ append_settings () {
 
 install_plugin () {
   # download vim-plug
-  info '\n>>> Download vim-plug ...\n'
+  info '>>> Download vim-plug ...\n'
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   # install plugins
-  info '\n>>> Install plugins ...\n'
+  info '>>> Install plugins ...\n'
   vim +PlugClean! +PlugUpdate +qal
 }
 
 update_plugin () {
   # update plugins
-  info '\n>>> Update plugins ...\n'
+  info '>>> Update plugins ...\n'
   vim +PlugClean! +PlugUpdate +qal
 }
 
 install_ycm () {
-  info '\n>>> Install YouCompleteMe ...\n'
+  info '>>> Install YouCompleteMe ...\n'
   ~/.vim/bundle/YouCompleteMe/install.py --all
 }
 
 run_install () {
   logo
-  succ '\n>>> Thanks for Install The 7th-Vim\n'
+  succ '>>> Thanks for Install The 7th-Vim\n'
   check
   install_backup
   load_vimrc
@@ -217,18 +217,18 @@ run_install () {
   install_ycm 
   append_settings
   language_support_info
-  succ '\n>>> DONE!\n\n'
+  succ '>>> DONE!\n\n'
 }
 
 run_update () {
   logo
-  succ '\n>>> Thanks for Update The 7th-Vim\n'
+  succ '>>> Thanks for Update The 7th-Vim\n'
   update_backup
   load_vimrc
   append_settings
   update_plugin
   language_support_info
-  succ '\n>>> DONE!\n\n'
+  succ '>>> DONE!\n\n'
 }
 
 if [ $# -ne 1 ]; then
