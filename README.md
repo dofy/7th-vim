@@ -67,6 +67,8 @@ vim ~/.vimrc.local
 - [tpope/vim-repeat][plug16] 增强 . 命令
 - [dracula/vim][color] dracule 配色
 
+> **补充说明：** 插件相关功能及用法请参考对应网站
+
 ## Key Mapping
 
 - `,` **Leader Key**
@@ -99,8 +101,6 @@ vim ~/.vimrc.local
   - 安装前会先对依赖的软件包进行检测，并提供安装提示作为参考（不排除以后写成自动安装的可能）
 - 字体的问题：
   - 参考 [issues/2][issues2] 和 [issues/3][issues3]
-
-**补充说明：插件相关功能及用法请参考对应网站**
 
 
 [screen-shot-1]: https://user-images.githubusercontent.com/344197/34291096-a2814680-e735-11e7-910d-b1eefae0b990.png
