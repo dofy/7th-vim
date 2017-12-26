@@ -244,8 +244,10 @@ while getopts ":iucl" opts; do
     u)
       run_update;;
     c)
+      logo
       check;;
     l)
+      logo
       language_support_info;;
     :)
       help;;
