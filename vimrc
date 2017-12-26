@@ -72,7 +72,7 @@ set autoread              " 自动加载外部修改
 set autowrite             " 自动保存
 set confirm               " 弹出文件未保存确认
 
-set timeoutlen=500        " Time to wait for a command
+set timeoutlen=700        " Time to wait for a command
 let mapleader=','         " Change the mapleader
 
 
@@ -160,6 +160,7 @@ Plug 'tpope/vim-surround'         " 自动增加、替换配对符
 Plug 'ctrlpvim/ctrlp.vim'         " 文件搜索
 Plug 'chxuan/change-colorscheme'  " 配色切换
 Plug 'Valloric/YouCompleteMe'     " 代码自动完成
+Plug 'tomtom/tcomment_vim'        " 添加注释
 Plug 'ryanoasis/vim-devicons'     " Vim Dev Icons
 Plug 'tpope/vim-repeat'           " 增强 . 命令
 Plug 'dracula/vim'                " dracule 配色
