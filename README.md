@@ -137,6 +137,10 @@ vim ~/.vimrc.local
 - 字体的问题：
   - 参考 [issues/2][issues2] 和 [issues/3][issues3]
 
+## 如果觉得还不错，可以给作者买杯咖啡鼓励一下 ☕️
+| 微信              | 支付宝            | Bitcoin             |
+| ---               | ---               | ---                 |
+| ![Wechat][wechat] | ![Alipay][alipay] | ![Bitcoin][bitcoin] |
 
 [screen-shot-1]: https://user-images.githubusercontent.com/344197/34345993-42b0397c-ea2e-11e7-9003-e8c7f6453cba.png
 [screen-shot-2]: https://user-images.githubusercontent.com/344197/34291098-a32023d6-e735-11e7-9fd5-285b4939c1c8.png
@@ -166,3 +170,6 @@ vim ~/.vimrc.local
 [color]: https://github.com/dracula/vim
 [issues2]: https://github.com/dofy/7th-vim/issues/2
 [issues3]: https://github.com/dofy/7th-vim/issues/3
+[wechat]: https://user-images.githubusercontent.com/344197/33651653-a02eb7be-daa1-11e7-9e09-82cfbeec2f98.png
+[alipay]: https://user-images.githubusercontent.com/344197/33651835-2d494894-daa2-11e7-932f-06adb8795f15.png
+[bitcoin]: https://user-images.githubusercontent.com/344197/33653103-d7863d68-daa6-11e7-9e74-f5d88954134e.png
