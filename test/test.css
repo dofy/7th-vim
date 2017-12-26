@@ -1,0 +1,17 @@
+div {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+div > li {
+  list-style: none;
+}
+
+#id-element {
+  background-color: #fc0;
+}
+
+.class-element {
+  display: flex;
+}

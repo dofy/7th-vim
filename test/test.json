@@ -1,0 +1,13 @@
+{
+  "number": 7,
+  "string": "some text",
+  "array": [
+    1, 2, 3,
+    "..."
+  ],
+  "object": {
+    "//commont": "I Love Google!",
+    "name": "Seven"
+  },
+  wrongKey: '¯\_(ツ)_/¯'
+}
