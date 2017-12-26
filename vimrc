@@ -30,7 +30,12 @@
 set      nocompatible
 filetype plugin indent on " 开启文件类型检测
 syntax   on               " 开启语法高亮
-set      foldmethod=syntax
+
+set nofoldenable          " 默认关闭代码折叠
+
+" 可以修改 .vimrc.local 开启代码折叠
+" set foldenable
+" set foldmethod=syntax
 
 "set shell=/bin/bash
 
