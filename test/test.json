@@ -5,6 +5,17 @@
     1, 2, 3,
     "..."
   ],
+  "colors": [
+    "black",
+    "gray",
+    "white",
+    "red",
+    "lightblue",
+    "pink",
+    "darkblue",
+    "blue",
+    "orange"
+  ],
   "object": {
     "//commont": "I Love Google!",
     "name": "Seven"

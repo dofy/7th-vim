@@ -1,10 +1,12 @@
 div {
+  color: white;
   margin: 0;
   padding: 0;
   line-height: 1.5;
 }
 
 div > li {
+  color: green;
   list-style: none;
 }
 
@@ -14,4 +16,5 @@ div > li {
 
 .class-element {
   display: flex;
+  background-color: rgb(196, 100, 6);
 }
