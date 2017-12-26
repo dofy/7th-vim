@@ -9,7 +9,7 @@
 "
 " Author: Seven Yu <dofyyu@gmail.com>
 " Source: https://github.com/dofy/7th-vim
-" Version: 1.1.0
+" Version: 2.0.1
 " Created: 2017-11-24
 "
 " Sections:
