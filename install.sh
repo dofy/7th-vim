@@ -59,6 +59,7 @@ help () {
   echo '  -i -- install'
   echo '  -u -- update'
   echo '  -c -- check dependent'
+  echo '  -l -- show language supported list'
   echo '  -h -- show help'
   echo
   exit 0
@@ -236,7 +237,7 @@ if [ $# -ne 1 ]; then
   help
 fi
 
-while getopts ":iuc" opts; do
+while getopts ":iucl" opts; do
   case $opts in
     i)
       run_install;;
@@ -244,6 +245,8 @@ while getopts ":iuc" opts; do
       run_update;;
     c)
       check;;
+    l)
+      language_support_info;;
     :)
       help;;
     ?)

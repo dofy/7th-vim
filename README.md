@@ -8,7 +8,7 @@
  /_/   \__|_| |_|   \_/ |_|_| |_| |_|
 ```
 
-工作中使用的一套 Vim 配置方案。 安装简单、轻量、易用、高可配置性。
+安装简单，轻量、易用、高可配置性。
 
 **Telegram Group:** [`https://t.me/The7thVim`](https://t.me/The7thVim)
 
@@ -38,6 +38,23 @@
 
 ```bash
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -i
+```
+### Check Dependent
+
+```bash
+bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -c
+```
+
+### Show Language Supported List
+
+```bash
+bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -l
+```
+
+### Help
+
+```bash
+bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -h
 ```
 
 ## Update
