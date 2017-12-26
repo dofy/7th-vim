@@ -18,6 +18,7 @@
 "   - Language Supports
 "   - Key Mapping
 "   - Plugins
+"   - Plugin Settings
 "   - Load Customize Settings
 "
 " ===============================================================
@@ -168,8 +169,6 @@ Plug 'dracula/vim'                " dracule 配色
 if count(g:language_group, 'markdown')
   Plug 'plasticboy/vim-markdown'                          " Markdown 代码高亮，自动格式化
   Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'} " Markdown 预览
-
-  let g:vim_markdown_new_list_item_indent = 2
 endif
 
 " html
@@ -180,18 +179,11 @@ endif
 " css
 if count(g:language_group, 'css')
   Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
-
-  augroup VimCSS3Syntax
-    autocmd!
-    autocmd FileType css setlocal iskeyword+=-
-  augroup END
 endif
 
 " js
 if count(g:language_group, 'js')
   Plug 'pangloss/vim-javascript'
-
-  let g:javascript_plugin_jsdoc = 1
 endif
 
 " json
@@ -222,6 +214,35 @@ if count(g:language_group, 'go')
 endif
 
 call plug#end()
+
+" -------------------------------------------------
+" PLUGIN SETTINGS
+" -------------------------------------------------
+" Language plugin settings
+if count(g:language_group, 'markdown')
+  let g:vim_markdown_new_list_item_indent = 2
+endif
+
+if count(g:language_group, 'css')
+  augroup VimCSS3Syntax
+    autocmd!
+    autocmd FileType css setlocal iskeyword+=-
+  augroup END
+endif
+
+if count(g:language_group, 'js')
+  let g:javascript_plugin_jsdoc = 1
+endif
+
+" Startify Header
+let g:startify_custom_header=[
+      \'   _____ _   _             _           ',
+      \'  |___  | |_| |__   __   _(_)_ __ ___  ',
+      \'     / /| __| `_ \  \ \ / / | `_ ` _ \ ',
+      \'    / / | |_| | | |  \ V /| | | | | | |',
+      \'   /_/   \__|_| |_|   \_/ |_|_| |_| |_|',
+      \'',
+      \'    The answer exists only in the Tao. ']
 
 " EasyAlign
 xmap ga <Plug>(EasyAlign)
@@ -263,7 +284,7 @@ let g:NERDTreeWinSize=35
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
-let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFolders = 1         " enables folder icon highlighting using exact match
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 
 " airline

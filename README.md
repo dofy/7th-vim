@@ -61,24 +61,25 @@ vim ~/.vimrc.local
 
 ## Plugins
 
-- [scrooloose/nerdtree][plug01] 树形目录
-- [Xuyuanp/nerdtree-git-plugin][plug02] NerdTree 显示 git 状态
-- [vim-airline/vim-airline][plug03] 美化 Vim 状态栏
-- [vim-airline/vim-airline-themes][plug04] Airline Themes
-- [junegunn/vim-easy-align][plug05] 对齐插件，强迫症福音
-- [iamcco/markdown-preview.vim][plug06] Markdown 预览
-- [junegunn/vim-slash][plug07] 优化搜索，移动清除搜索高亮
-- [gorodinskiy/vim-coloresque][plug08] 颜色预览
-- [jiangmiao/auto-pairs][plug09] 符号自动补全
-- [tpope/vim-surround][plug10] 自动增加、替换配对符
-- [ctrlpvim/ctrlp.vim][plug11] 文件搜索
-- [chxuan/change-colorscheme][plug12] 配色切换
-- [docunext/closetag.vim][plug13] 自动关闭 HTML 标签
-- [Valloric/YouCompleteMe][plug14] 代码自动完成
-- [ryanoasis/vim-devicons][plug15] Vim Dev Icons
-- [tpope/vim-repeat][plug16] 增强 . 命令
-- [mhinz/vim-startify][plug17] 启动页
-- [roman/golden-ratio][plug18] 自动控制窗口大小
+- [scrooloose/nerdtree][plug1] 树形目录
+- [Xuyuanp/nerdtree-git-plugin][plug2] NerdTree 显示 git 状态
+- [tiagofumo/vim-nerdtree-syntax-highlight][plug3] NerdTree 文件类型高亮
+- [vim-airline/vim-airline][plug4] 美化 Vim 状态栏
+- [vim-airline/vim-airline-themes][plug5] Airline Themes
+- [junegunn/vim-easy-align][plug6] 对齐插件，强迫症福音
+- [iamcco/markdown-preview.vim][plug7] Markdown 预览
+- [junegunn/vim-slash][plug8] 优化搜索，移动清除搜索高亮
+- [gorodinskiy/vim-coloresque][plug9] 颜色预览
+- [jiangmiao/auto-pairs][plug10] 符号自动补全
+- [tpope/vim-surround][plug11] 自动增加、替换配对符
+- [ctrlpvim/ctrlp.vim][plug12] 文件搜索
+- [chxuan/change-colorscheme][plug13] 配色切换
+- [docunext/closetag.vim][plug14] 自动关闭 HTML 标签
+- [Valloric/YouCompleteMe][plug15] 代码自动完成
+- [ryanoasis/vim-devicons][plug16] Vim Dev Icons
+- [tpope/vim-repeat][plug17] 增强 . 命令
+- [mhinz/vim-startify][plug18] 启动页
+- [roman/golden-ratio][plug19] 自动控制窗口大小
 - [dracula/vim][color] dracule 配色
 
 > **补充说明：** 插件相关功能及用法请参考对应网站
@@ -122,24 +123,25 @@ vim ~/.vimrc.local
 [screen-shot-3]: https://user-images.githubusercontent.com/344197/34291097-a2da1aa8-e735-11e7-9a5e-7629a6507663.png
 [screen-shot-4]: https://user-images.githubusercontent.com/344197/34291099-a37b0102-e735-11e7-9ee4-e03b7f180af0.png
 [screen-shot-5]: https://user-images.githubusercontent.com/344197/34291095-a2399ca4-e735-11e7-9883-6b1a27364fe4.png
-[plug01]: https://github.com/scrooloose/nerdtree
-[plug02]: https://github.com/Xuyuanp/nerdtree-git-plugin
-[plug03]: https://github.com/vim-airline/vim-airline
-[plug04]: https://github.com/vim-airline/vim-airline-themes
-[plug05]: https://github.com/junegunn/vim-easy-align
-[plug06]: https://github.com/iamcco/markdown-preview.vim
-[plug07]: https://github.com/junegunn/vim-slash
-[plug08]: https://github.com/gorodinskiy/vim-coloresque
-[plug09]: https://github.com/jiangmiao/auto-pairs
-[plug10]: https://github.com/tpope/vim-surround
-[plug11]: https://github.com/ctrlpvim/ctrlp.vim
-[plug12]: https://github.com/chxuan/change-colorscheme
-[plug13]: https://github.com/docunext/closetag.vim
-[plug14]: https://github.com/Valloric/YouCompleteMe
-[plug15]: https://github.com/ryanoasis/vim-devicons
-[plug16]: https://github.com/tpope/vim-repeat
-[plug17]: https://github.com/mhinz/vim-startify
-[plug18]: https://github.com/roman/golden-ratio
+[plug1]: https://github.com/scrooloose/nerdtree
+[plug2]: https://github.com/Xuyuanp/nerdtree-git-plugin
+[plug3]: https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+[plug4]: https://github.com/vim-airline/vim-airline
+[plug5]: https://github.com/vim-airline/vim-airline-themes
+[plug6]: https://github.com/junegunn/vim-easy-align
+[plug7]: https://github.com/iamcco/markdown-preview.vim
+[plug8]: https://github.com/junegunn/vim-slash
+[plug9]: https://github.com/gorodinskiy/vim-coloresque
+[plug10]: https://github.com/jiangmiao/auto-pairs
+[plug11]: https://github.com/tpope/vim-surround
+[plug12]: https://github.com/ctrlpvim/ctrlp.vim
+[plug13]: https://github.com/chxuan/change-colorscheme
+[plug14]: https://github.com/docunext/closetag.vim
+[plug15]: https://github.com/Valloric/YouCompleteMe
+[plug16]: https://github.com/ryanoasis/vim-devicons
+[plug17]: https://github.com/tpope/vim-repeat
+[plug18]: https://github.com/mhinz/vim-startify
+[plug19]: https://github.com/roman/golden-ratio
 [color]: https://github.com/dracula/vim
 [issues2]: https://github.com/dofy/7th-vim/issues/2
 [issues3]: https://github.com/dofy/7th-vim/issues/3
