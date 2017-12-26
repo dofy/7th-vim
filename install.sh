@@ -52,9 +52,9 @@ logo () {
 
 help () {
   logo
-  echo 
+  echo
   echo 'Usage: install.sh <Options>'
-  echo 
+  echo
   echo 'Options:'
   echo '  -i -- install'
   echo '  -u -- update'
