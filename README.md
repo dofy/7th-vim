@@ -118,9 +118,9 @@ vim ~/.vimrc.local
   - 参考 [issues/2][issues2] 和 [issues/3][issues3]
 
 
-[screen-shot-1]: https://user-images.githubusercontent.com/344197/34291096-a2814680-e735-11e7-910d-b1eefae0b990.png
+[screen-shot-1]: https://user-images.githubusercontent.com/344197/34345993-42b0397c-ea2e-11e7-9003-e8c7f6453cba.png
 [screen-shot-2]: https://user-images.githubusercontent.com/344197/34291098-a32023d6-e735-11e7-9fd5-285b4939c1c8.png
-[screen-shot-3]: https://user-images.githubusercontent.com/344197/34291097-a2da1aa8-e735-11e7-9a5e-7629a6507663.png
+[screen-shot-3]: https://user-images.githubusercontent.com/344197/34345994-444dac1a-ea2e-11e7-98a1-3a21c4d000a9.png
 [screen-shot-4]: https://user-images.githubusercontent.com/344197/34291099-a37b0102-e735-11e7-9ee4-e03b7f180af0.png
 [screen-shot-5]: https://user-images.githubusercontent.com/344197/34291095-a2399ca4-e735-11e7-9883-6b1a27364fe4.png
 [plug1]: https://github.com/scrooloose/nerdtree
