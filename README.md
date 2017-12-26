@@ -80,6 +80,7 @@ vim ~/.vimrc.local
 - [tpope/vim-repeat][plug17] 增强 . 命令
 - [mhinz/vim-startify][plug18] 启动页
 - [roman/golden-ratio][plug19] 自动控制窗口大小
+- [tomtom/tcomment_vim][plug20] 添加注释
 - [dracula/vim][color] dracule 配色
 
 > **补充说明：** 插件相关功能及用法请参考对应网站
@@ -106,6 +107,8 @@ vim ~/.vimrc.local
 - `<F8>` 关闭 Markdown 预览
 - `<F9>` 上一个配色方案
 - `<F10>` 下一个配色方案
+- `gcc` 注释/取消注释 当前行
+- `g>` 注释选中文本（VISUAL 模式）
 - `:W` 用 `sudo` 命令保存文件
 
 ## Q&A
@@ -142,6 +145,7 @@ vim ~/.vimrc.local
 [plug17]: https://github.com/tpope/vim-repeat
 [plug18]: https://github.com/mhinz/vim-startify
 [plug19]: https://github.com/roman/golden-ratio
+[plug20]: https://github.com/tomtom/tcomment_vim
 [color]: https://github.com/dracula/vim
 [issues2]: https://github.com/dofy/7th-vim/issues/2
 [issues3]: https://github.com/dofy/7th-vim/issues/3
