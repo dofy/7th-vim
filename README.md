@@ -88,55 +88,61 @@ vim ~/.vimrc.local
 
 ## Plugins
 
-- [scrooloose/nerdtree][plug1] 树形目录
-- [Xuyuanp/nerdtree-git-plugin][plug2] NerdTree 显示 git 状态
+- [scrooloose/nerdtree][plug1]                     树形目录
+- [Xuyuanp/nerdtree-git-plugin][plug2]             NerdTree 显示 git 状态
 - [tiagofumo/vim-nerdtree-syntax-highlight][plug3] NerdTree 文件类型高亮
-- [vim-airline/vim-airline][plug4] 美化 Vim 状态栏
-- [vim-airline/vim-airline-themes][plug5] Airline Themes
-- [junegunn/vim-easy-align][plug6] 对齐插件，强迫症福音
-- [iamcco/markdown-preview.vim][plug7] Markdown 预览
-- [junegunn/vim-slash][plug8] 优化搜索，移动清除搜索高亮
-- [gorodinskiy/vim-coloresque][plug9] 颜色预览
-- [jiangmiao/auto-pairs][plug10] 符号自动补全
-- [tpope/vim-surround][plug11] 自动增加、替换配对符
-- [ctrlpvim/ctrlp.vim][plug12] 文件搜索
-- [chxuan/change-colorscheme][plug13] 配色切换
-- [docunext/closetag.vim][plug14] 自动关闭 HTML 标签
-- [Valloric/YouCompleteMe][plug15] 代码自动完成
-- [ryanoasis/vim-devicons][plug16] Vim Dev Icons
-- [tpope/vim-repeat][plug17] 增强 . 命令
-- [mhinz/vim-startify][plug18] 启动页
-- [roman/golden-ratio][plug19] 自动控制窗口大小
-- [tomtom/tcomment_vim][plug20] 添加注释
-- [dracula/vim][color] dracule 配色
+- [vim-airline/vim-airline][plug4]                 美化 Vim 状态栏
+- [vim-airline/vim-airline-themes][plug5]          Airline Themes
+- [junegunn/vim-easy-align][plug6]                 对齐插件，强迫症福音
+- [iamcco/markdown-preview.vim][plug7]             Markdown 预览
+- [junegunn/vim-slash][plug8]                      优化搜索，移动清除搜索高亮
+- [gorodinskiy/vim-coloresque][plug9]              颜色预览
+- [jiangmiao/auto-pairs][plug10]                   符号自动补全
+- [tpope/vim-surround][plug11]                     自动增加、替换配对符
+- [junegunn/fzf.vim][plug12]                       强大、高效的搜索引擎
+- [chxuan/change-colorscheme][plug13]              配色切换
+- [docunext/closetag.vim][plug14]                  自动关闭 HTML 标签
+- [Valloric/YouCompleteMe][plug15]                 代码自动完成
+- [ryanoasis/vim-devicons][plug16]                 Vim Dev Icons
+- [tpope/vim-repeat][plug17]                       增强 . 命令
+- [mhinz/vim-startify][plug18]                     启动页
+- [roman/golden-ratio][plug19]                     自动控制窗口大小
+- [tomtom/tcomment_vim][plug20]                    添加注释
+- [dracula/vim][color]                             dracule 配色
 
 > **补充说明：** 插件相关功能及用法请参考对应网站
 
 ## Key Mapping
 
-- `,` **Leader Key**
-- `<Ctrl> A` INSERT 模式下移动光标到行首
-- `<Ctrl> E` INSERT 模式下移动光标到行尾
-- `<Ctrl> B` INSERT 模式下光标左移一位
-- `<Ctrl> F` INSERT 模式下光标右移一位
-- `<Ctrl> J` 跳转到下面的窗口
-- `<Ctrl> K` 跳转到上面的窗口
-- `<Ctrl> H` 跳转到左侧的窗口
-- `<Ctrl> L` 跳转到右侧的窗口
-- `<Ctrl> N` 切换 Buffer 列表中的文件
-- `<Ctrl> P` 打开文件搜索模式
-- `<Shift> H` 跳转到前一个 Tab
-- `<Shift> L` 跳转到后一个 Tab
-- `<Leader>t` 开启新 Tab
-- `<Leader>w` 关闭当前 Tab
-- `<Ctrl> F` 或 `<Leader>f` 开启 Nerdtree
-- `<F7>` 开启 Markdown 预览
-- `<F8>` 关闭 Markdown 预览
-- `<F9>` 上一个配色方案
-- `<F10>` 下一个配色方案
-- `gcc` 注释/取消注释 当前行
-- `g>` 注释选中文本（VISUAL 模式）
-- `:W` 用 `sudo` 命令保存文件
+- `,`          **Leader Key**
+- `<Ctrl>-A`   INSERT 模式下移动光标到行首
+- `<Ctrl>-E`   INSERT 模式下移动光标到行尾
+- `<Ctrl>-B`   INSERT 模式下光标左移一位
+- `<Ctrl>-F`   INSERT 模式下光标右移一位
+- `<Ctrl>-J`   跳转到下面的窗口
+- `<Ctrl>-K`   跳转到上面的窗口
+- `<Ctrl>-H`   跳转到左侧的窗口
+- `<Ctrl>-L`   跳转到右侧的窗口
+- `<Ctrl>-N`   打开 Buffer 列表中的下一个文件
+- `<Ctrl>-P`   打开 Buffer 列表中的上一个文件
+- `<Ctrl>-F`   或 `<Leader>ff` 在当前工作目录中搜索文件
+- `<Leader>fb` 在 Buffer 中搜索文件
+- `<Leader>fh` 在历史文件中搜索
+- `<Leader>fc` 搜索可用配色方案
+- `<Leader>fl` 在 Buffer 文件中进行文本搜索
+- `<Leader>fm` 搜索 Vim 中可用的命令
+- `<Shift>-H`  跳转到前一个 Tab
+- `<Shift>-L`  跳转到后一个 Tab
+- `<Leader>t`  开启新 Tab
+- `<Leader>w`  关闭当前 Tab
+- `<Ctrl>-E`   或 `<Leader>e` 开启 Nerdtree
+- `<F7>`       开启 Markdown 预览
+- `<F8>`       关闭 Markdown 预览
+- `<F9>`       上一个配色方案
+- `<F10>`      下一个配色方案
+- `gcc`        注释/取消注释 当前行
+- `g>`         注释选中文本（VISUAL 模式）
+- `:W`         用 `sudo` 命令保存文件
 
 ## Q&A
 
@@ -168,7 +174,7 @@ vim ~/.vimrc.local
 [plug9]: https://github.com/gorodinskiy/vim-coloresque
 [plug10]: https://github.com/jiangmiao/auto-pairs
 [plug11]: https://github.com/tpope/vim-surround
-[plug12]: https://github.com/ctrlpvim/ctrlp.vim
+[plug12]: https://github.com/junegunn/fzf.vim
 [plug13]: https://github.com/chxuan/change-colorscheme
 [plug14]: https://github.com/docunext/closetag.vim
 [plug15]: https://github.com/Valloric/YouCompleteMe
