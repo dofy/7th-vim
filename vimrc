@@ -37,7 +37,10 @@ set nofoldenable          " 默认关闭代码折叠
 " set foldenable
 " set foldmethod=syntax
 
-"set shell=/bin/bash
+" set shell=/bin/bash
+
+" 如果 Insert 模式下 backspace 键不能正常回删，可以取消注释下面一行试试
+" set backspace=indent,eol,start
 
 set number                " 显示行号          nu
 set relativenumber        " 显示相对行号      rnu
