@@ -39,8 +39,9 @@ set nofoldenable          " 默认关闭代码折叠
 
 " set shell=/bin/bash
 
-" 如果 Insert 模式下 backspace 键不能正常回删，可以取消注释下面一行试试
-" set backspace=indent,eol,start
+set backspace=indent,eol,start  " 智能回删
+set whichwrap+=h,l,<,>,[,]      " 光标循环
+set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
 
 set number                " 显示行号          nu
 set relativenumber        " 显示相对行号      rnu
