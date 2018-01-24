@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# prints colored text
+# print colored text
 print_style () {
 
   if   [ "$2" == "info" ] ; then COLOR="96m";
@@ -58,8 +58,8 @@ help () {
   echo 'Options:'
   echo '  -i -- install'
   echo '  -u -- update'
-  echo '  -c -- check dependent'
-  echo '  -l -- show language supported list'
+  echo '  -c -- check dependencies'
+  echo '  -l -- show the list of supported languages'
   echo '  -h -- show help'
   echo
   exit 0
@@ -211,7 +211,7 @@ install_ycm () {
 
 run_install () {
   logo
-  succ '>>> Thanks for Install The 7th-Vim\n'
+  succ '>>> Thanks for Installing The 7th-Vim\n'
   check
   install_backup
   load_vimrc
@@ -224,7 +224,7 @@ run_install () {
 
 run_update () {
   logo
-  succ '>>> Thanks for Update The 7th-Vim\n'
+  succ '>>> Thanks for Updating The 7th-Vim\n'
   update_backup
   load_vimrc
   append_settings
