@@ -117,13 +117,27 @@ Plug 'gorodinskiy/vim-coloresque' " 颜色预览
 Plug 'jiangmiao/auto-pairs'       " 符号自动补全
 Plug 'tpope/vim-surround'         " 自动增加、替换配对符
 Plug 'chxuan/change-colorscheme'  " 配色切换
-Plug 'Valloric/YouCompleteMe'     " 代码自动完成
+" Plug 'Valloric/YouCompleteMe'     " 代码自动完成
 Plug 'tomtom/tcomment_vim'        " 添加注释
 Plug 'ryanoasis/vim-devicons'     " Vim Dev Icons
 Plug 'tpope/vim-repeat'           " 增强 . 命令
 Plug 'dracula/vim'                " dracule 配色
 
+" Plug deoplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 " Plugins for language
+
+" zsh & vim
+Plug 'zchee/deoplete-zsh'
+Plug 'Shougo/neco-vim'
+
 " markdown
 if count(g:language_group, 'markdown')
   Plug 'plasticboy/vim-markdown'                          " Markdown 代码高亮，自动格式化
@@ -143,6 +157,7 @@ endif
 " js
 if count(g:language_group, 'js')
   Plug 'pangloss/vim-javascript'
+  Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'} " Javascript for deoplete
 endif
 
 " json
@@ -156,20 +171,26 @@ if count(g:language_group, 'php')
   Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
   Plug 'vim-scripts/phpfolding.vim', {'for': 'php'}
   Plug '2072/PHP-Indenting-for-VIm', {'for': 'php'}
+  " PHP for deoplete
+  Plug 'phpactor/phpactor', {'do': 'composer install', 'for': 'php'}
+  Plug 'kristijanhusak/deoplete-phpactor'
 endif
 
 " python
 if count(g:language_group, 'python')
   Plug 'hdima/python-syntax'
+  Plug 'zchee/deoplete-jedi' " Python for deoplete
 endif
 
 " c
 if count(g:language_group, 'c')
+  Plug 'zchee/deoplete-clang' " Clang for deoplete
 endif
 
 " go
 if count(g:language_group, 'go')
   Plug 'fatih/vim-go', { 'for': 'go' } " Golang
+  Plug 'zchee/deoplete-go', {'for': 'go'} " Golang for deoplete
 endif
 
 call plug#end()
@@ -257,6 +278,9 @@ endif
 if count(g:language_group, 'js')
   let g:javascript_plugin_jsdoc = 1
 endif
+
+" Use deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Startify Header
 let g:startify_custom_header=[
