@@ -162,8 +162,9 @@ vim ~/.vimrc.local
 ## Q&A
 
 - 安装依赖：
-  - 由于自动补全插件采用了 `YouCompleteMe`，该插件需要 `Python` 和 `cmake` 所以最好先装好
-  - 安装过程（包括安装 `YouCompleteMe`），以及一些插件需要 `Git`
+  - ~~由于自动补全插件采用了 `YouCompleteMe`，该插件需要 `Python` 和 `cmake` 所以最好先装好~~
+  - ~~安装过程（包括安装 `YouCompleteMe`），以及一些插件需要 `Git`~~
+  - 自动补全插件更换为 `deoplete`，需要 `vim` 支持 `Python3`，具体请参考 [deoplete.nvim][plug21] 的安装说明
   - 安装前会先对依赖的软件包进行检测，并提供安装提示作为参考（不排除以后写成自动安装的可能）
 - 字体的问题：
   - 参考 [issues/2][issues2] 和 [issues/3][issues3]
