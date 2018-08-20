@@ -88,29 +88,40 @@ vim ~/.vimrc.local
 
 ## Plugins
 
-| 插件                                                   | 说明                       |
-| :---                                                   | ----                       |
-| [scrooloose / **nerdtree**][plug1]                     | 以树形目录窗格方式浏览文件 |
-| [Xuyuanp / **nerdtree-git-plugin**][plug2]             | NerdTree 显示 git 状态     |
-| [tiagofumo / **vim-nerdtree-syntax-highlight**][plug3] | NerdTree 文件类型高亮      |
-| [vim-airline / **vim-airline**][plug4]                 | 美化 Vim 状态栏            |
-| [vim-airline / **vim-airline-themes**][plug5]          | Airline Themes             |
-| [junegunn / **vim-easy-align**][plug6]                 | 对齐插件，强迫症福音       |
-| [iamcco / **markdown-preview.vim**][plug7]             | Markdown 预览              |
-| [junegunn / **vim-slash**][plug8]                      | 优化搜索，移动清除搜索高亮 |
-| [gorodinskiy / **vim-coloresque**][plug9]              | 颜色值预览                 |
-| [jiangmiao / **auto-pairs**][plug10]                   | 符号自动补全               |
-| [tpope / **vim-surround**][plug11]                     | 自动增加、替换配对符       |
-| [junegunn / **fzf.vim**][plug12]                       | 强大、高效的搜索引擎       |
-| [chxuan / **change-colorscheme**][plug13]              | 配色方案切换               |
-| [docunext / **closetag.vim**][plug14]                  | 自动关闭 HTML 标签         |
-| [Valloric / **YouCompleteMe**][plug15]                 | 代码自动完成               |
-| [ryanoasis / **vim-devicons**][plug16]                 | Vim Dev Icons              |
-| [tpope / **vim-repeat**][plug17]                       | 增强 . 命令                |
-| [mhinz / **vim-startify**][plug18]                     | 启动页                     |
-| [roman / **golden-ratio**][plug19]                     | 自动控制窗口大小           |
-| [tomtom / **tcomment_vim**][plug20]                    | 添加/清除 注释             |
-| [dracula / **vim**][color]                             | dracule 配色               |
+| 插件                                                   | 说明                        |
+| :---                                                   | ----                        |
+| [scrooloose / **nerdtree**][plug1]                     | 以树形目录窗格方式浏览文件  |
+| [Xuyuanp / **nerdtree-git-plugin**][plug2]             | NerdTree 显示 git 状态      |
+| [tiagofumo / **vim-nerdtree-syntax-highlight**][plug3] | NerdTree 文件类型高亮       |
+| [vim-airline / **vim-airline**][plug4]                 | 美化 Vim 状态栏             |
+| [vim-airline / **vim-airline-themes**][plug5]          | Airline Themes              |
+| [junegunn / **vim-easy-align**][plug6]                 | 对齐插件，强迫症福音        |
+| [iamcco / **markdown-preview.vim**][plug7]             | Markdown 预览               |
+| [junegunn / **vim-slash**][plug8]                      | 优化搜索，移动清除搜索高亮  |
+| [gorodinskiy / **vim-coloresque**][plug9]              | 颜色值预览                  |
+| [jiangmiao / **auto-pairs**][plug10]                   | 符号自动补全                |
+| [tpope / **vim-surround**][plug11]                     | 自动增加、替换配对符        |
+| [junegunn / **fzf.vim**][plug12]                       | 强大、高效的搜索引擎        |
+| [chxuan / **change-colorscheme**][plug13]              | 配色方案切换                |
+| [docunext / **closetag.vim**][plug14]                  | 自动关闭 HTML 标签          |
+| ~~[Valloric / **YouCompleteMe**][plug15]~~             | ~~代码自动完成~~            |
+| [ryanoasis / **vim-devicons**][plug16]                 | Vim Dev Icons               |
+| [tpope / **vim-repeat**][plug17]                       | 增强 . 命令                 |
+| [mhinz / **vim-startify**][plug18]                     | 启动页                      |
+| [roman / **golden-ratio**][plug19]                     | 自动控制窗口大小            |
+| [tomtom / **tcomment_vim**][plug20]                    | 添加/清除 注释              |
+| [Shougo / **deoplete.nvim**][plug21]                   | 代码自动完成                |
+| [roxma / **nvim-yarp**][plug22]                        | for **deoplete**            |
+| [roxma / **vim-hug-neovim-rpc**][plug23]               | for **deoplete**            |
+| [zchee / **deoplete-zsh**][plug24]                     | zsh for **deoplete**        |
+| [Shougo / **neco-vim**][plug25]                        | vim for **deoplete**        |
+| [carlitux / **deoplete-ternjs**][plug26]               | Javascript for **deoplete** |
+| [phpactor / **phpactor**][plug27]                      | PHP for **deoplete**        |
+| [kristijanhusak / **deoplete-phpactor**][plug28]       | PHP for **deoplete**        |
+| [zchee / **deoplete-jedi**][plug29]                    | Python for **deoplete**     |
+| [zchee / **deoplete-clang**][plug30]                   | C for **deoplete**          |
+| [zchee / **deoplete-go**][plug31]                      | Golang for **deopolete**    |
+| [dracula / **vim**][color]                             | dracule 配色                |
 
 > **补充说明：** 插件相关功能及用法请参考对应网站
 
@@ -182,6 +193,17 @@ vim ~/.vimrc.local
 [plug18]: https://github.com/mhinz/vim-startify
 [plug19]: https://github.com/roman/golden-ratio
 [plug20]: https://github.com/tomtom/tcomment_vim
+[plug21]: https://github.com/Shougo/deoplete.nvim
+[plug22]: https://github.com/roxma/nvim-yarp
+[plug23]: https://github.com/roxma/vim-hug-neovim-rpc
+[plug24]: https://github.com/zchee/deoplete-zsh
+[plug25]: https://github.com/Shougo/neco-vim
+[plug26]: https://github.com/carlitux/deoplete-ternjs
+[plug27]: https://github.com/phpactor/phpactor
+[plug28]: https://github.com/kristijanhusak/deoplete-phpactor
+[plug29]: https://github.com/zchee/deoplete-jedi
+[plug30]: https://github.com/zchee/deoplete-clang
+[plug31]: https://github.com/zchee/deoplete-go
 [color]: https://github.com/dracula/vim
 [issues2]: https://github.com/dofy/7th-vim/issues/2
 [issues3]: https://github.com/dofy/7th-vim/issues/3

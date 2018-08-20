@@ -190,7 +190,7 @@ endif
 " go
 if count(g:language_group, 'go')
   Plug 'fatih/vim-go', { 'for': 'go' } " Golang
-  Plug 'zchee/deoplete-go', {'for': 'go'} " Golang for deoplete
+  Plug 'zchee/deoplete-go', {'do': 'make', 'for': 'go'} " Golang for deoplete
 endif
 
 call plug#end()
