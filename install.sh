@@ -78,6 +78,7 @@ language_support_info () {
   normal '  - python\n'
   #normal '  - c/c++\n'
   normal '  - go\n'
+  normal '  - dart\n'
   info '-------------------------------------------------------------------\n'
 }
 
@@ -149,6 +150,7 @@ install_backup () {
   mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
   mv ~/.vimrc.local ~/7th-vim-bak
+  mv ~/.vimrc.plugins ~/7th-vim-bak
   mv ~/.vimrc.language ~/7th-vim-bak
 }
 
