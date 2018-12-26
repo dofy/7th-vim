@@ -172,6 +172,13 @@ load_vimrc () {
       https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.language
   fi
 
+  # download .vimrc.plugins file
+  if [ ! -f ~/.vimrc.plugins ] ; then
+    info '>>> Download .vimrc.plugins file ...\n'
+    curl -fLo ~/.vimrc.plugins \
+      https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.plugins
+  fi
+
   # download .vimrc.local file
   if [ ! -f ~/.vimrc.local ] ; then
     info '>>> Download .vimrc.local file ...\n'

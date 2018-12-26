@@ -172,6 +172,19 @@ if count(g:language_group, 'go')
   Plug 'fatih/vim-go', { 'for': 'go' } " Golang
 endif
 
+" dart
+if count(g:language_group, 'dart')
+  Plug 'reisub0/hot-reload.vim'     " Flutter Hot Reload
+  Plug 'dart-lang/dart-vim-plugin'  " Dart
+endif
+
+" -------------------------------------------------
+" LOAD CUSTOMIZE PLUGINS
+" -------------------------------------------------
+if filereadable(expand($HOME . '/.vimrc.plugins'))
+  source $HOME/.vimrc.plugins
+endif
+
 call plug#end()
 
 
