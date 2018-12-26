@@ -3,4 +3,4 @@
 " -------------------------------------------------
 
 " Edit the following line to enable/disable languages your want
-let g:language_group = ['markdown', 'html', 'css', 'js', 'json', 'php', 'python', 'c', 'go', 'dart', ]
+let g:language_group = ['markdown', 'html', 'css', 'js', 'json', 'php', 'python', 'c', 'go', ]

@@ -78,7 +78,6 @@ language_support_info () {
   normal '  - python\n'
   #normal '  - c/c++\n'
   normal '  - go\n'
-  normal '  - dart\n'
   info '-------------------------------------------------------------------\n'
 }
 
