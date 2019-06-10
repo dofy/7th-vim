@@ -77,6 +77,7 @@ set confirm               " 弹出文件未保存确认
 
 set history=1024
 set undofile
+set undodir=~/.vim/.undodir
 
 set timeoutlen=700        " Time to wait for a command
 let mapleader=','         " Change the mapleader

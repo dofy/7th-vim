@@ -143,6 +143,10 @@ how_to () {
   fi
 }
 
+create_undo_dir () {
+  mkdir -p ~/.vim/.undodir
+}
+
 install_backup () {
   # remove and backup old files
   info '>>> Remove and backup old files ...\n'
@@ -221,6 +225,7 @@ run_install () {
   logo
   succ '>>> Thanks for Installing The 7th-Vim\n'
   check
+  create_undo_dir
   install_backup
   load_vimrc
   install_plugin
@@ -233,6 +238,7 @@ run_install () {
 run_update () {
   logo
   succ '>>> Thanks for Updating The 7th-Vim\n'
+  create_undo_dir
   update_backup
   load_vimrc
   append_settings
