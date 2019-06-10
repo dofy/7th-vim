@@ -75,6 +75,9 @@ set autoread              " 自动加载外部修改
 set autowrite             " 自动保存
 set confirm               " 弹出文件未保存确认
 
+set history=1024
+set undofile
+
 set timeoutlen=700        " Time to wait for a command
 let mapleader=','         " Change the mapleader
 
