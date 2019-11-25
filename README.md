@@ -96,7 +96,7 @@ vim ~/.vimrc.local
 | [vim-airline / **vim-airline**][plug4]                 | 美化 Vim 状态栏            |
 | [vim-airline / **vim-airline-themes**][plug5]          | Airline Themes             |
 | [junegunn / **vim-easy-align**][plug6]                 | 对齐插件，强迫症福音       |
-| [iamcco / **markdown-preview.vim**][plug7]             | Markdown 预览              |
+| [iamcco / **markdown-preview.nvim**][plug7]             | Markdown 预览              |
 | [junegunn / **vim-slash**][plug8]                      | 优化搜索，移动清除搜索高亮 |
 | [gorodinskiy / **vim-coloresque**][plug9]              | 颜色值预览                 |
 | [jiangmiao / **auto-pairs**][plug10]                   | 符号自动补全               |
@@ -168,7 +168,7 @@ vim ~/.vimrc.local
 [plug4]: https://github.com/vim-airline/vim-airline
 [plug5]: https://github.com/vim-airline/vim-airline-themes
 [plug6]: https://github.com/junegunn/vim-easy-align
-[plug7]: https://github.com/iamcco/markdown-preview.vim
+[plug7]: https://github.com/iamcco/markdown-preview.nvim
 [plug8]: https://github.com/junegunn/vim-slash
 [plug9]: https://github.com/gorodinskiy/vim-coloresque
 [plug10]: https://github.com/jiangmiao/auto-pairs
