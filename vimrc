@@ -130,8 +130,8 @@ Plug 'dracula/vim'                " dracule 配色
 " Plugins for language
 " markdown
 if count(g:language_group, 'markdown')
-  Plug 'plasticboy/vim-markdown'                          " Markdown 代码高亮，自动格式化
-  Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'} " Markdown 预览
+  Plug 'plasticboy/vim-markdown'                                            " Markdown 代码高亮，自动格式化
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " Markdown 预览
 endif
 
 " html
@@ -228,8 +228,8 @@ command W w !sudo tee % > /dev/null
 if count(g:language_group, 'markdown')
   nmap <silent> <F7> <Plug>MarkdownPreview
   imap <silent> <F7> <Plug>MarkdownPreview
-  nmap <silent> <F8> <Plug>StopMarkdownPreview
-  imap <silent> <F8> <Plug>StopMarkdownPreview
+  nmap <silent> <F8> <Plug>MarkdownPreviewStop
+  imap <silent> <F8> <Plug>MarkdownPreviewStop
 endif
 
 " FZF
