@@ -104,7 +104,7 @@ vim ~/.vimrc.local
 | [junegunn / **fzf.vim**][plug12]                       | 强大、高效的搜索引擎       |
 | [chxuan / **change-colorscheme**][plug13]              | 配色方案切换               |
 | [docunext / **closetag.vim**][plug14]                  | 自动关闭 HTML 标签         |
-| [Valloric / **YouCompleteMe**][plug15]                 | 代码自动完成               |
+| [zxqfl / **tabnine-vim**][plug15]                      | 代码自动完成               |
 | [ryanoasis / **vim-devicons**][plug16]                 | Vim Dev Icons              |
 | [tpope / **vim-repeat**][plug17]                       | 增强 . 命令                |
 | [mhinz / **vim-startify**][plug18]                     | 启动页                     |
@@ -150,10 +150,6 @@ vim ~/.vimrc.local
 
 ## Q&A
 
-- 安装依赖：
-  - 由于自动补全插件采用了 `YouCompleteMe`，该插件需要 `Python` 和 `cmake` 所以最好先装好
-  - 安装过程（包括安装 `YouCompleteMe`），以及一些插件需要 `Git`
-  - 安装前会先对依赖的软件包进行检测，并提供安装提示作为参考（不排除以后写成自动安装的可能）
 - 字体的问题：
   - 参考 [issues/2][issues2] 和 [issues/3][issues3]
 
@@ -176,7 +172,7 @@ vim ~/.vimrc.local
 [plug12]: https://github.com/junegunn/fzf.vim
 [plug13]: https://github.com/chxuan/change-colorscheme
 [plug14]: https://github.com/docunext/closetag.vim
-[plug15]: https://github.com/Valloric/YouCompleteMe
+[plug15]: https://github.com/codota/TabNine
 [plug16]: https://github.com/ryanoasis/vim-devicons
 [plug17]: https://github.com/tpope/vim-repeat
 [plug18]: https://github.com/mhinz/vim-startify
