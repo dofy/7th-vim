@@ -10,8 +10,6 @@
 
 安装简单，轻量、易用、高可配置性。
 
-**Telegram Group:** [`https://t.me/The7thVim`](https://t.me/The7thVim)
-
 ## Index
 
 - [Screenshot](#screenshot)
