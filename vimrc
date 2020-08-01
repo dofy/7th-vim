@@ -125,7 +125,7 @@ Plug 'zxqfl/tabnine-vim'          " 代码自动完成
 Plug 'tomtom/tcomment_vim'        " 添加注释
 Plug 'ryanoasis/vim-devicons'     " Vim Dev Icons
 Plug 'tpope/vim-repeat'           " 增强 . 命令
-Plug 'dracula/vim'                " dracule 配色
+Plug 'dracula/vim'                " dracula 配色
 
 " Plugins for language
 " markdown
