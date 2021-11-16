@@ -35,39 +35,59 @@
 ## Install
 
 ```bash
+# curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -i
-# or
+```
+or
+```bash
+# wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -i
 ```
 ### Check Dependent
 
 ```bash
+# curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -c
-# or
+```
+or
+```bash
+# wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -c
 ```
 
 ### Show Language Supported List
 
 ```bash
+# curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -l
-# or
+```
+or
+```bash
+# wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -l
 ```
 
 ### Help
 
 ```bash
+# curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -h
-# or
+```
+or
+```bash
+# wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -h
 ```
 
 ## Update
 
 ```bash
+# curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -u
-# or
+```
+or
+```bash
+# wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -u
 ```
 
