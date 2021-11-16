@@ -131,7 +131,7 @@ Plug 'dracula/vim'                " dracula 配色
 " markdown
 if count(g:language_group, 'markdown')
   Plug 'plasticboy/vim-markdown'                                            " Markdown 代码高亮，自动格式化
-  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " Markdown 预览
+  Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' } " Markdown 预览
 endif
 
 " html
