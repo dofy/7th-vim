@@ -94,7 +94,7 @@ check () {
   fi
 
   info '>> Checking Python ...'
-  if which python > /dev/null ; then
+  if which python3 > /dev/null ; then
     succ '\t OK!\n'
   else
     E=1
@@ -128,6 +128,8 @@ how_to () {
     info '$ ' ; normal 'sudo yum install -y git-all\n'
   elif [ $1 == python ] ; then
     warn 'How to install Python:\n'
+    info '- for macOS\n'
+    info '$ ' ; normal 'brew install python\n'
     info '- for Ubuntu\n'
     info '$ ' ; normal 'sudo apt-get install -y python-dev python3-dev\n'
     info '- for CentOS\n'
