@@ -113,19 +113,19 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-startify'         " 启动页
-Plug 'roman/golden-ratio'         " 自动控制窗口大小
-Plug 'junegunn/vim-easy-align'    " 对齐插件，强迫症福音
-Plug 'junegunn/vim-slash'         " 优化搜索，移动清除搜索高亮
-Plug 'gorodinskiy/vim-coloresque' " 颜色预览
-Plug 'jiangmiao/auto-pairs'       " 符号自动补全
-Plug 'tpope/vim-surround'         " 自动增加、替换配对符
-Plug 'chxuan/change-colorscheme'  " 配色切换
-Plug 'codota/tabnine-vim'          " 代码自动完成
-Plug 'tomtom/tcomment_vim'        " 添加注释
-Plug 'ryanoasis/vim-devicons'     " Vim Dev Icons
-Plug 'tpope/vim-repeat'           " 增强 . 命令
-Plug 'dracula/vim'                " dracula 配色
+Plug 'mhinz/vim-startify'                                   " 启动页
+Plug 'roman/golden-ratio'                                   " 自动控制窗口大小
+Plug 'junegunn/vim-easy-align'                              " 对齐插件，强迫症福音
+Plug 'junegunn/vim-slash'                                   " 优化搜索，移动清除搜索高亮
+Plug 'gorodinskiy/vim-coloresque'                           " 颜色预览
+Plug 'jiangmiao/auto-pairs'                                 " 符号自动补全
+Plug 'tpope/vim-surround'                                   " 自动增加、替换配对符
+Plug 'chxuan/change-colorscheme'                            " 配色切换
+Plug 'tabnine/YouCompleteMe', { 'do': './install.py' }      " 代码自动完成
+Plug 'tomtom/tcomment_vim'                                  " 添加注释
+Plug 'ryanoasis/vim-devicons'                               " Vim Dev Icons
+Plug 'tpope/vim-repeat'                                     " 增强 . 命令
+Plug 'dracula/vim'                                          " dracula 配色
 
 " Plugins for language
 " markdown

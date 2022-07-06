@@ -114,7 +114,7 @@ vim ~/.vimrc.local
 | [vim-airline / **vim-airline**][plug4]                 | 美化 Vim 状态栏            |
 | [vim-airline / **vim-airline-themes**][plug5]          | Airline Themes             |
 | [junegunn / **vim-easy-align**][plug6]                 | 对齐插件，强迫症福音       |
-| [iamcco / **markdown-preview.nvim**][plug7]             | Markdown 预览              |
+| [iamcco / **markdown-preview.nvim**][plug7]            | Markdown 预览              |
 | [junegunn / **vim-slash**][plug8]                      | 优化搜索，移动清除搜索高亮 |
 | [gorodinskiy / **vim-coloresque**][plug9]              | 颜色值预览                 |
 | [jiangmiao / **auto-pairs**][plug10]                   | 符号自动补全               |
@@ -122,7 +122,7 @@ vim ~/.vimrc.local
 | [junegunn / **fzf.vim**][plug12]                       | 强大、高效的搜索引擎       |
 | [chxuan / **change-colorscheme**][plug13]              | 配色方案切换               |
 | [docunext / **closetag.vim**][plug14]                  | 自动关闭 HTML 标签         |
-| [zxqfl / **tabnine-vim**][plug15]                      | 代码自动完成               |
+| [tabnine / **YouCompleteMe**][plug15]                  | 代码自动完成               |
 | [ryanoasis / **vim-devicons**][plug16]                 | Vim Dev Icons              |
 | [tpope / **vim-repeat**][plug17]                       | 增强 . 命令                |
 | [mhinz / **vim-startify**][plug18]                     | 启动页                     |
@@ -190,7 +190,7 @@ vim ~/.vimrc.local
 [plug12]: https://github.com/junegunn/fzf.vim
 [plug13]: https://github.com/chxuan/change-colorscheme
 [plug14]: https://github.com/docunext/closetag.vim
-[plug15]: https://github.com/codota/TabNine
+[plug15]: https://github.com/tabnine/YouCompleteMe
 [plug16]: https://github.com/ryanoasis/vim-devicons
 [plug17]: https://github.com/tpope/vim-repeat
 [plug18]: https://github.com/mhinz/vim-startify
