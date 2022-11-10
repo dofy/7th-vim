@@ -58,6 +58,7 @@ help () {
   echo 'Options:'
   echo '  -i -- install'
   echo '  -u -- update'
+  echo '  -b -- remove config files and backup'
   echo '  -c -- check dependencies'
   echo '  -l -- show the list of supported languages'
   echo '  -h -- show help'
@@ -249,16 +250,24 @@ run_update () {
   succ '>>> DONE!\n\n'
 }
 
+run_backup () {
+  install_backup
+  succ '>>> DONE!\n\n'
+}
+
 if [ $# -ne 1 ]; then
   help
 fi
 
-while getopts ":iucl" opts; do
+while getopts ":iubcl" opts; do
   case $opts in
     i)
       run_install;;
     u)
       run_update;;
+    b)
+      logo
+      run_backup;;
     c)
       logo
       check;;

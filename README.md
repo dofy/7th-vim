@@ -12,13 +12,19 @@
 
 ## Index
 
-- [Screenshot](#screenshot)
-- [Install](#install)
-- [Update](#update)
-- [Customize](#customize)
-- [Plugins](#plugins)
-- [Key Mapping](#key-mapping)
-- [Q&A](#qa)
+- [The 7th Vim](#the-7th-vim)
+  - [Index](#index)
+  - [Screenshot](#screenshot)
+  - [Install](#install)
+    - [Check dependent](#check-dependent)
+    - [Show language supported list](#show-language-supported-list)
+    - [Remove current config files and backup](#remove-current-config-files-and-backup)
+    - [Help](#help)
+  - [Update](#update)
+  - [Customize](#customize)
+  - [Plugins](#plugins)
+  - [Key Mapping](#key-mapping)
+  - [Q&A](#qa)
 
 ## Screenshot
 
@@ -43,7 +49,7 @@ or
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -i
 ```
-### Check Dependent
+### Check dependent
 
 ```bash
 # curl
@@ -55,7 +61,7 @@ or
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -c
 ```
 
-### Show Language Supported List
+### Show language supported list
 
 ```bash
 # curl
@@ -65,6 +71,17 @@ or
 ```bash
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -l
+```
+
+### Remove current config files and backup
+
+```bash
+bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -b
+```
+or
+```bash
+# wget
+bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -b
 ```
 
 ### Help
