@@ -1,14 +1,16 @@
 # The 7th Vim
 
 ```
- _____ _   _             _           
-|___  | |_| |__   __   _(_)_ __ ___  
-   / /| __| '_ \  \ \ / / | '_ ` _ \ 
+ _____ _   _             _
+|___  | |_| |__   __   _(_)_ __ ___
+   / /| __| '_ \  \ \ / / | '_ ` _ \
   / / | |_| | | |  \ V /| | | | | | |
  /_/   \__|_| |_|   \_/ |_|_| |_| |_|
 ```
 
 安装简单，轻量、易用、高可配置性。
+
+> 现在我已经转到 [neovim][neovim] 阵营，对应的配置请参考 [dofy/nvim][dofy/nvim] 项目。
 
 ## Index
 
@@ -44,18 +46,23 @@
 # curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -i
 ```
+
 or
+
 ```bash
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -i
 ```
+
 ### Check dependent
 
 ```bash
 # curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -c
 ```
+
 or
+
 ```bash
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -c
@@ -67,7 +74,9 @@ bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vi
 # curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -l
 ```
+
 or
+
 ```bash
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -l
@@ -78,7 +87,9 @@ bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vi
 ```bash
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -b
 ```
+
 or
+
 ```bash
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -b
@@ -90,7 +101,9 @@ bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vi
 # curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -h
 ```
+
 or
+
 ```bash
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -h
@@ -102,7 +115,9 @@ bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vi
 # curl
 bash <(curl -L https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh) -u
 ```
+
 or
+
 ```bash
 # wget
 bash <(wget --no-check-certificate https://raw.githubusercontent.com/dofy/7th-vim/master/install.sh -O -) -u
@@ -124,7 +139,7 @@ vim ~/.vimrc.local
 ## Plugins
 
 | 插件                                                   | 说明                       |
-| :---                                                   | ----                       |
+| :----------------------------------------------------- | -------------------------- |
 | [scrooloose / **nerdtree**][plug1]                     | 以树形目录窗格方式浏览文件 |
 | [Xuyuanp / **nerdtree-git-plugin**][plug2]             | NerdTree 显示 git 状态     |
 | [tiagofumo / **vim-nerdtree-syntax-highlight**][plug3] | NerdTree 文件类型高亮      |
@@ -151,37 +166,37 @@ vim ~/.vimrc.local
 
 ## Key Mapping
 
-| 快捷键/命令               | 说明                           |
-| :--:                      | ----                           |
-| `,`                       | **Leader Key**                 |
-| `<Ctrl> A`                | INSERT 模式下移动光标到行首    |
-| `<Ctrl> E`                | INSERT 模式下移动光标到行尾    |
-| `<Ctrl> B`                | INSERT 模式下光标左移一位      |
-| `<Ctrl> F`                | INSERT 模式下光标右移一位      |
-| `<Ctrl> J`                | 跳转到下面的窗口               |
-| `<Ctrl> K`                | 跳转到上面的窗口               |
-| `<Ctrl> H`                | 跳转到左侧的窗口               |
-| `<Ctrl> L`                | 跳转到右侧的窗口               |
-| `<Ctrl> N`                | 打开 Buffer 列表中的下一个文件 |
-| `<Ctrl> P`                | 打开 Buffer 列表中的上一个文件 |
+|        快捷键/命令        | 说明                           |
+| :-----------------------: | ------------------------------ |
+|            `,`            | **Leader Key**                 |
+|        `<Ctrl> A`         | INSERT 模式下移动光标到行首    |
+|        `<Ctrl> E`         | INSERT 模式下移动光标到行尾    |
+|        `<Ctrl> B`         | INSERT 模式下光标左移一位      |
+|        `<Ctrl> F`         | INSERT 模式下光标右移一位      |
+|        `<Ctrl> J`         | 跳转到下面的窗口               |
+|        `<Ctrl> K`         | 跳转到上面的窗口               |
+|        `<Ctrl> H`         | 跳转到左侧的窗口               |
+|        `<Ctrl> L`         | 跳转到右侧的窗口               |
+|        `<Ctrl> N`         | 打开 Buffer 列表中的下一个文件 |
+|        `<Ctrl> P`         | 打开 Buffer 列表中的上一个文件 |
 | `<Ctrl> F` / `<Leader>ff` | 在当前工作目录中搜索文件       |
-| `<Leader>fb`              | 在 Buffer 中搜索文件           |
-| `<Leader>fh`              | 在历史文件中搜索               |
-| `<Leader>fc`              | 搜索可用配色方案               |
-| `<Leader>fl`              | 在 Buffer 文件中进行文本搜索   |
-| `<Leader>fm`              | 搜索 Vim 中可用的命令          |
-| `<Shift>-H`               | 跳转到前一个 Tab               |
-| `<Shift>-L`               | 跳转到后一个 Tab               |
-| `<Leader>t`               | 开启新 Tab                     |
-| `<Leader>w`               | 关闭当前 Tab                   |
+|       `<Leader>fb`        | 在 Buffer 中搜索文件           |
+|       `<Leader>fh`        | 在历史文件中搜索               |
+|       `<Leader>fc`        | 搜索可用配色方案               |
+|       `<Leader>fl`        | 在 Buffer 文件中进行文本搜索   |
+|       `<Leader>fm`        | 搜索 Vim 中可用的命令          |
+|        `<Shift>-H`        | 跳转到前一个 Tab               |
+|        `<Shift>-L`        | 跳转到后一个 Tab               |
+|        `<Leader>t`        | 开启新 Tab                     |
+|        `<Leader>w`        | 关闭当前 Tab                   |
 | `<Ctrl> E` / `<Leader>e`  | 开启 Nerdtree                  |
-| `<F7>`                    | 开启 Markdown 预览             |
-| `<F8>`                    | 关闭 Markdown 预览             |
-| `<F9>`                    | 上一个配色方案                 |
-| `<F10>`                   | 下一个配色方案                 |
-| `gcc`                     | 注释/取消注释 当前行           |
-| `g>`                      | 注释选中文本（VISUAL 模式）    |
-| `:W`                      | 用 `sudo` 命令保存文件         |
+|          `<F7>`           | 开启 Markdown 预览             |
+|          `<F8>`           | 关闭 Markdown 预览             |
+|          `<F9>`           | 上一个配色方案                 |
+|          `<F10>`          | 下一个配色方案                 |
+|           `gcc`           | 注释/取消注释 当前行           |
+|           `g>`            | 注释选中文本（VISUAL 模式）    |
+|           `:W`            | 用 `sudo` 命令保存文件         |
 
 ## Q&A
 
@@ -216,3 +231,5 @@ vim ~/.vimrc.local
 [color]: https://github.com/dracula/vim
 [issues2]: https://github.com/dofy/7th-vim/issues/2
 [issues3]: https://github.com/dofy/7th-vim/issues/3
+[neovim]: https://neovim.io/
+[dofy/nvim]: https://github.com/dofy/nvim
