@@ -26,7 +26,7 @@
   - [Customize](#customize)
   - [Plugins](#plugins)
   - [Key Mapping](#key-mapping)
-  - [Q&A](#qa)
+  - [Q\&A](#qa)
 
 ## Screenshot
 
@@ -154,7 +154,7 @@ vim ~/.vimrc.local
 | [junegunn / **fzf.vim**][plug12]                       | 强大、高效的搜索引擎       |
 | [chxuan / **change-colorscheme**][plug13]              | 配色方案切换               |
 | [docunext / **closetag.vim**][plug14]                  | 自动关闭 HTML 标签         |
-| [tabnine / **YouCompleteMe**][plug15]                  | 代码自动完成               |
+| [neoclide / **coc.nvim**][plug15]                      | 代码自动完成               |
 | [ryanoasis / **vim-devicons**][plug16]                 | Vim Dev Icons              |
 | [tpope / **vim-repeat**][plug17]                       | 增强 . 命令                |
 | [mhinz / **vim-startify**][plug18]                     | 启动页                     |
@@ -222,7 +222,7 @@ vim ~/.vimrc.local
 [plug12]: https://github.com/junegunn/fzf.vim
 [plug13]: https://github.com/chxuan/change-colorscheme
 [plug14]: https://github.com/docunext/closetag.vim
-[plug15]: https://github.com/tabnine/YouCompleteMe
+[plug15]: https://github.com/neoclide/coc.nvim
 [plug16]: https://github.com/ryanoasis/vim-devicons
 [plug17]: https://github.com/tpope/vim-repeat
 [plug18]: https://github.com/mhinz/vim-startify

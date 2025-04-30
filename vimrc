@@ -121,7 +121,7 @@ Plug 'gorodinskiy/vim-coloresque'                           " 颜色预览
 Plug 'jiangmiao/auto-pairs'                                 " 符号自动补全
 Plug 'tpope/vim-surround'                                   " 自动增加、替换配对符
 Plug 'chxuan/change-colorscheme'                            " 配色切换
-Plug 'tabnine/YouCompleteMe', { 'do': './install.py' }      " 代码自动完成
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }           " 代码自动完成
 Plug 'tomtom/tcomment_vim'                                  " 添加注释
 Plug 'ryanoasis/vim-devicons'                               " Vim Dev Icons
 Plug 'tpope/vim-repeat'                                     " 增强 . 命令
@@ -221,6 +221,22 @@ imap <F10> <Esc> :NextColorScheme<CR>
 map  <F9>  :PreviousColorScheme<CR>
 imap <F9>  <Esc> :PreviousColorScheme<CR>
 
+" Use tab for trigger completion with characters ahead and navigate
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " :W to save file by sudo
 command W w !sudo tee % > /dev/null
 
@@ -253,6 +269,20 @@ nmap ga <Plug>(EasyAlign)
 " -------------------------------------------------
 " PLUGIN SETTINGS
 " -------------------------------------------------
+"  coc.nvim settings
+let g:coc_global_extensions = [
+      \ 'coc-json',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-markdownlint',
+      \ 'coc-prettier',
+      \ 'coc-pairs',
+      \ 'coc-snippets',
+      \ 'coc-php-cs-fixer',
+      \ 'coc-pyright',
+      \ 'coc-go'
+      \ ]
+
 " Language plugin settings
 if count(g:language_group, 'markdown')
   let g:vim_markdown_new_list_item_indent = 2
