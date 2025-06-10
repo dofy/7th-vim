@@ -1,46 +1,52 @@
 #!/bin/bash
 
 # print colored text
-print_style () {
+print_style() {
 
-  if   [ "$2" == "info" ] ; then COLOR="96m";
-  elif [ "$2" == "succ" ] ; then COLOR="92m";
-  elif [ "$2" == "warn" ] ; then COLOR="95m";
-  elif [ "$2" == "error" ] ; then COLOR="91m";
-  else COLOR="0m"; #default color
+  if [ "$2" == "info" ]; then
+    COLOR="96m"
+  elif [ "$2" == "succ" ]; then
+    COLOR="92m"
+  elif [ "$2" == "warn" ]; then
+    COLOR="95m"
+  elif [ "$2" == "error" ]; then
+    COLOR="91m"
+  else
+    COLOR="0m" #default color
   fi
 
-  STARTCOLOR="\e[$COLOR";
-  ENDCOLOR="\e[0m";
+  STARTCOLOR="\e[$COLOR"
+  ENDCOLOR="\e[0m"
 
-  printf "$STARTCOLOR%b$ENDCOLOR" "$1";
+  printf "$STARTCOLOR%b$ENDCOLOR" "$1"
 }
 
-info () {
+info() {
   print_style "$1" "info"
 }
 
-succ () {
+succ() {
   print_style "$1" "succ"
 }
 
-warn () {
+warn() {
   print_style "$1" "warn"
 }
 
-error () {
+error() {
   print_style "$1" "error"
 }
 
-normal () {
+normal() {
   print_style "$1" "-"
 }
 
-die () {
-  error "$1" ; exit 1
+die() {
+  error "$1"
+  exit 1
 }
 
-logo () {
+logo() {
   warn '======================================\n'
   warn '  _____ _   _             _           \n'
   warn ' |___  | |_| |__   __   _(_)_ __ ___  \n'
@@ -50,7 +56,7 @@ logo () {
   warn '======================================\n'
 }
 
-help () {
+help() {
   logo
   echo
   echo 'Usage: install.sh <Options>'
@@ -66,9 +72,11 @@ help () {
   exit 0
 }
 
-language_support_info () {
+language_support_info() {
   info '-------------------------------------------------------------------\n'
-  info 'Edit ' ; succ '~/.vimrc.language' ; info ' to enable/disable language support you need.\n'
+  info 'Edit '
+  succ '~/.vimrc.language'
+  info ' to enable/disable language support you need.\n'
   info 'Supported languages:\n'
   normal '  - markdown\n'
   normal '  - html\n'
@@ -83,10 +91,10 @@ language_support_info () {
 }
 
 # check dependent
-check () {
+check() {
   E=0
   info '>> Checking Git ...'
-  if which git > /dev/null ; then
+  if which git >/dev/null; then
     succ '\t OK!\n'
   else
     E=1
@@ -95,7 +103,7 @@ check () {
   fi
 
   info '>> Checking Python ...'
-  if which python3 > /dev/null ; then
+  if which python3 >/dev/null; then
     succ '\t OK!\n'
   else
     E=1
@@ -103,54 +111,42 @@ check () {
     how_to python
   fi
 
-  info '>> Checking cmake ...'
-  if which cmake > /dev/null ; then
-    succ '\t OK!\n'
-  else
-    E=1
-    error '\t NO!\n'
-    how_to cmake
-  fi
-
-  if [ $E -ne 0 ] ; then
+  if [ $E -ne 0 ]; then
     warn '>>> The 7th-Vim '
     die 'install failed!\n'
   fi
 }
 
-how_to () {
-  if [ $1 == git ] ; then
+how_to() {
+  if [ $1 == git ]; then
     warn 'How to install Git:\n'
     info '- for macOS, refer to the following url:\n'
     normal 'https://git-scm.com/book/en/v2/Getting-Started-Installing-Git\n'
     info '- for Ubuntu\n'
-    info '$ ' ; normal 'sudo apt-get install -y git-all\n'
+    info '$ '
+    normal 'sudo apt-get install -y git-all\n'
     info '- for CentOS\n'
-    info '$ ' ; normal 'sudo yum install -y git-all\n'
-  elif [ $1 == python ] ; then
+    info '$ '
+    normal 'sudo yum install -y git-all\n'
+  elif [ $1 == python ]; then
     warn 'How to install Python:\n'
     info '- for macOS\n'
-    info '$ ' ; normal 'brew install python\n'
+    info '$ '
+    normal 'brew install python\n'
     info '- for Ubuntu\n'
-    info '$ ' ; normal 'sudo apt-get install -y python-dev python3-dev\n'
+    info '$ '
+    normal 'sudo apt-get install -y python-dev python3-dev\n'
     info '- for CentOS\n'
-    info '$ ' ; normal 'sudo yum install -y python-devel python3-devel\n'
-  elif [ $1 == cmake ] ; then
-    warn 'How to install cmake:\n'
-    info '- for macOS\n'
-    info '$ ' ; normal 'brew install gcc cmake\n'
-    info '- for Ubuntu\n'
-    info '$ ' ; normal 'sudo apt-get install -y cmake\n'
-    info '- for CentOS\n'
-    info '$ ' ; normal 'sudo yum install -y automake gcc gcc-c++ cmake\n'
+    info '$ '
+    normal 'sudo yum install -y python-devel python3-devel\n'
   fi
 }
 
-create_undo_dir () {
+create_undo_dir() {
   mkdir -p ~/.vim/.undodir
 }
 
-install_backup () {
+install_backup() {
   # remove and backup old files
   info '>>> Remove and backup old files ...\n'
   mkdir -p ~/7th-vim-bak
@@ -160,49 +156,49 @@ install_backup () {
   mv ~/.vimrc.language ~/7th-vim-bak
 }
 
-update_backup () {
+update_backup() {
   # remove and backup old files
   info '>>> Remove and backup old files ...\n'
   mkdir -p ~/7th-vim-bak
   mv ~/.vimrc ~/7th-vim-bak
 }
 
-load_vimrc () {
+load_vimrc() {
   # download .vimrc file
   info '>>> Download .vimrc file ...\n'
   curl -fLo ~/.vimrc \
     https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc
 
   # download .vimrc.language file
-  if [ ! -f ~/.vimrc.language ] ; then
+  if [ ! -f ~/.vimrc.language ]; then
     info '>>> Download .vimrc.language file ...\n'
     curl -fLo ~/.vimrc.language \
       https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.language
   fi
 
   # download .vimrc.plugins file
-  if [ ! -f ~/.vimrc.plugins ] ; then
+  if [ ! -f ~/.vimrc.plugins ]; then
     info '>>> Download .vimrc.plugins file ...\n'
     curl -fLo ~/.vimrc.plugins \
       https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.plugins
   fi
 
   # download .vimrc.local file
-  if [ ! -f ~/.vimrc.local ] ; then
+  if [ ! -f ~/.vimrc.local ]; then
     info '>>> Download .vimrc.local file ...\n'
     curl -fLo ~/.vimrc.local \
       https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.local
   fi
 }
 
-append_settings () {
+append_settings() {
   # append settings
   curl -f \
     https://raw.githubusercontent.com/dofy/7th-vim/master/vimrc.append \
-    >> ~/.vimrc
+    >>~/.vimrc
 }
 
-install_plugin () {
+install_plugin() {
   # download vim-plug
   info '>>> Download vim-plug ...\n'
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -213,18 +209,18 @@ install_plugin () {
   vim +PlugClean! +PlugUpdate +qal
 }
 
-update_plugin () {
+update_plugin() {
   # update plugins
   info '>>> Update plugins ...\n'
   vim +PlugClean! +PlugUpdate +qal
 }
 
-install_ycm () {
+install_ycm() {
   info '>>> Install YouCompleteMe ...\n'
   ~/.vim/bundle/YouCompleteMe/install.py --all
 }
 
-run_install () {
+run_install() {
   logo
   succ '>>> Thanks for Installing The 7th-Vim\n'
   check
@@ -232,13 +228,13 @@ run_install () {
   install_backup
   load_vimrc
   install_plugin
-  install_ycm 
+  install_ycm
   append_settings
   language_support_info
   succ '>>> DONE!\n\n'
 }
 
-run_update () {
+run_update() {
   logo
   succ '>>> Thanks for Updating The 7th-Vim\n'
   create_undo_dir
@@ -250,7 +246,7 @@ run_update () {
   succ '>>> DONE!\n\n'
 }
 
-run_backup () {
+run_backup() {
   install_backup
   succ '>>> DONE!\n\n'
 }
@@ -261,22 +257,29 @@ fi
 
 while getopts ":iubcl" opts; do
   case $opts in
-    i)
-      run_install;;
-    u)
-      run_update;;
-    b)
-      logo
-      run_backup;;
-    c)
-      logo
-      check;;
-    l)
-      logo
-      language_support_info;;
-    :)
-      help;;
-    ?)
-      help;;
+  i)
+    run_install
+    ;;
+  u)
+    run_update
+    ;;
+  b)
+    logo
+    run_backup
+    ;;
+  c)
+    logo
+    check
+    ;;
+  l)
+    logo
+    language_support_info
+    ;;
+  :)
+    help
+    ;;
+  ?)
+    help
+    ;;
   esac
 done

@@ -121,7 +121,6 @@ Plug 'gorodinskiy/vim-coloresque'                           " 颜色预览
 Plug 'jiangmiao/auto-pairs'                                 " 符号自动补全
 Plug 'tpope/vim-surround'                                   " 自动增加、替换配对符
 Plug 'chxuan/change-colorscheme'                            " 配色切换
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }           " 代码自动完成
 Plug 'tomtom/tcomment_vim'                                  " 添加注释
 Plug 'ryanoasis/vim-devicons'                               " Vim Dev Icons
 Plug 'tpope/vim-repeat'                                     " 增强 . 命令
@@ -147,6 +146,7 @@ endif
 " js
 if count(g:language_group, 'js')
   Plug 'pangloss/vim-javascript'
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 endif
 
 " json
