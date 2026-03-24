@@ -215,11 +215,6 @@ update_plugin() {
   vim +PlugClean! +PlugUpdate +qal
 }
 
-install_ycm() {
-  info '>>> Install YouCompleteMe ...\n'
-  ~/.vim/bundle/YouCompleteMe/install.py --all
-}
-
 run_install() {
   logo
   succ '>>> Thanks for Installing The 7th-Vim\n'
@@ -228,7 +223,6 @@ run_install() {
   install_backup
   load_vimrc
   install_plugin
-  install_ycm
   append_settings
   language_support_info
   succ '>>> DONE!\n\n'
@@ -255,7 +249,7 @@ if [ $# -ne 1 ]; then
   help
 fi
 
-while getopts ":iubcl" opts; do
+while getopts ":iubclh" opts; do
   case $opts in
   i)
     run_install
@@ -274,6 +268,9 @@ while getopts ":iubcl" opts; do
   l)
     logo
     language_support_info
+    ;;
+  h)
+    help
     ;;
   :)
     help

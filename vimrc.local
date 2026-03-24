@@ -4,5 +4,5 @@
 
 "set wrap     " 自动折行
 
-" macOS: brew tap caskroom/fonts && brew cask install font-hack-nerd-font
-"set guifont=Knack\ Nerd\ Font:h12  
+" macOS: brew install --cask font-hack-nerd-font
+"set guifont=Knack\ Nerd\ Font:h12

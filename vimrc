@@ -114,13 +114,11 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'                                   " 启动页
-Plug 'roman/golden-ratio'                                   " 自动控制窗口大小
 Plug 'junegunn/vim-easy-align'                              " 对齐插件，强迫症福音
 Plug 'junegunn/vim-slash'                                   " 优化搜索，移动清除搜索高亮
 Plug 'gorodinskiy/vim-coloresque'                           " 颜色预览
 Plug 'jiangmiao/auto-pairs'                                 " 符号自动补全
 Plug 'tpope/vim-surround'                                   " 自动增加、替换配对符
-Plug 'chxuan/change-colorscheme'                            " 配色切换
 Plug 'tomtom/tcomment_vim'                                  " 添加注释
 Plug 'ryanoasis/vim-devicons'                               " Vim Dev Icons
 Plug 'tpope/vim-repeat'                                     " 增强 . 命令
@@ -135,7 +133,7 @@ endif
 
 " html
 if count(g:language_group, 'html')
-  Plug 'docunext/closetag.vim' " 自动关闭 HTML 标签
+  Plug 'alvan/vim-closetag' " 自动关闭 HTML 标签
 endif
 
 " css
@@ -156,16 +154,10 @@ endif
 
 " php
 if count(g:language_group, 'php')
-  Plug 'mageekguy/php.vim', {'for': 'php'}
-  Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
-  Plug 'vim-scripts/phpfolding.vim', {'for': 'php'}
-  Plug '2072/PHP-Indenting-for-VIm', {'for': 'php'}
+  Plug 'StanAngeloff/php.vim', {'for': 'php'}
 endif
 
-" python
-if count(g:language_group, 'python')
-  Plug 'hdima/python-syntax'
-endif
+" python (coc-pyright provides LSP support; no extra syntax plugin needed)
 
 " c
 if count(g:language_group, 'c')
@@ -215,12 +207,6 @@ nnoremap <Leader>t :tabnew<CR>
 " Close Tab
 nnoremap <Leader>w :tabclose<CR>
 
-" Change Color Scheme
-map  <F10> :NextColorScheme<CR>
-imap <F10> <Esc> :NextColorScheme<CR>
-map  <F9>  :PreviousColorScheme<CR>
-imap <F9>  <Esc> :PreviousColorScheme<CR>
-
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file
@@ -269,20 +255,6 @@ nmap ga <Plug>(EasyAlign)
 " -------------------------------------------------
 " PLUGIN SETTINGS
 " -------------------------------------------------
-"  coc.nvim settings
-let g:coc_global_extensions = [
-      \ 'coc-json',
-      \ 'coc-html',
-      \ 'coc-css',
-      \ 'coc-markdownlint',
-      \ 'coc-prettier',
-      \ 'coc-pairs',
-      \ 'coc-snippets',
-      \ 'coc-php-cs-fixer',
-      \ 'coc-pyright',
-      \ 'coc-go'
-      \ ]
-
 " Language plugin settings
 if count(g:language_group, 'markdown')
   let g:vim_markdown_new_list_item_indent = 2
@@ -297,6 +269,18 @@ endif
 
 if count(g:language_group, 'js')
   let g:javascript_plugin_jsdoc = 1
+  let g:coc_global_extensions = [
+        \ 'coc-json',
+        \ 'coc-html',
+        \ 'coc-css',
+        \ 'coc-markdownlint',
+        \ 'coc-prettier',
+        \ 'coc-pairs',
+        \ 'coc-snippets',
+        \ 'coc-php-cs-fixer',
+        \ 'coc-pyright',
+        \ 'coc-go'
+        \ ]
 endif
 
 " Startify Header
