@@ -1,5 +1,5 @@
-let g:airline_theme='dracula'
-colorscheme dracula
+let g:airline_theme='catppuccin_mocha'
+silent! colorscheme catppuccin_mocha
 
 
 " -------------------------------------------------

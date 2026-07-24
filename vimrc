@@ -53,15 +53,19 @@ set smartindent           " 智能缩进          si
 set softtabstop=2         " Tab 缩进单位      sts
 set shiftwidth=2          " 自动缩进单位      sw
 set encoding=utf-8        " UTF-8 编码
-set t_Co=256              " 开启 256 色（若终端支持）
+set t_Co=256              " 256 色回退（若终端不支持真彩）
+if has('termguicolors')
+  set termguicolors       " 开启真彩色（现代终端）
+endif
 set background=dark
 set nowrap                " 禁止折行
+set mouse=a               " 开启鼠标支持
+set clipboard=unnamed     " 使用系统剪贴板
 
 set ignorecase            " 搜索忽略大小写    ic
 set incsearch             " 搜索时实时高亮    is
 set hlsearch              " 高亮所有搜索结果  hls
 
-set cursorcolumn          " 高亮当前列        cuc
 set cursorline            " 高亮当前行        cul
 
 set scrolloff=5           " 屏幕顶/底部保持 5 行文本
@@ -78,8 +82,15 @@ set confirm               " 弹出文件未保存确认
 set history=1024
 set undofile
 set undodir=~/.vim/.undodir
+" 确保 undodir 存在，否则 undofile 静默失效
+if !isdirectory(expand(&undodir))
+  call mkdir(expand(&undodir), 'p', 0700)
+endif
 
-set timeoutlen=700        " Time to wait for a command
+set updatetime=300        " 诊断/CursorHold 响应更快（coc 建议）
+set signcolumn=yes        " 常驻符号列，避免诊断出现时抖动
+
+set timeoutlen=1000       " Time to wait for a command
 let mapleader=','         " Change the mapleader
 
 
@@ -119,10 +130,9 @@ Plug 'junegunn/vim-slash'                                   " 优化搜索，移
 Plug 'gorodinskiy/vim-coloresque'                           " 颜色预览
 Plug 'jiangmiao/auto-pairs'                                 " 符号自动补全
 Plug 'tpope/vim-surround'                                   " 自动增加、替换配对符
-Plug 'tomtom/tcomment_vim'                                  " 添加注释
 Plug 'ryanoasis/vim-devicons'                               " Vim Dev Icons
 Plug 'tpope/vim-repeat'                                     " 增强 . 命令
-Plug 'dracula/vim'                                          " dracula 配色
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }               " catppuccin 配色
 
 " Plugins for language
 " markdown
@@ -176,6 +186,12 @@ if filereadable(expand($HOME . '/.vimrc.plugins'))
 endif
 
 call plug#end()
+
+" 启用 Vim 9.1+ 内置注释插件（取代 tcomment）
+" 提供 gcc（行）/ gc（VISUAL 选区）/ gcip（段落）等
+if has('patch-9.1.0375')
+  packadd! comment
+endif
 
 
 " -------------------------------------------------

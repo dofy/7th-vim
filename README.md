@@ -157,8 +157,9 @@ vim ~/.vimrc.local
 | [ryanoasis / **vim-devicons**][plug15]                 | Vim Dev Icons              |
 | [tpope / **vim-repeat**][plug16]                       | 增强 . 命令                |
 | [mhinz / **vim-startify**][plug17]                     | 启动页                     |
-| [tomtom / **tcomment_vim**][plug18]                    | 添加/清除 注释             |
-| [dracula / **vim**][color]                             | Dracula 配色               |
+| [catppuccin / **vim**][color]                          | Catppuccin 配色            |
+
+> **补充说明：** 注释功能改用 Vim 9.1+ 内置 `comment` 插件（`gcc` / `gc`），不再依赖 tcomment。
 
 > **补充说明：** 插件相关功能及用法请参考对应网站
 
@@ -191,7 +192,7 @@ vim ~/.vimrc.local
 |          `<F7>`           | 开启 Markdown 预览             |
 |          `<F8>`           | 关闭 Markdown 预览             |
 |           `gcc`           | 注释/取消注释 当前行           |
-|           `g>`            | 注释选中文本（VISUAL 模式）    |
+|           `gc`            | 注释选中文本（VISUAL 模式）    |
 |           `:W`            | 用 `sudo` 命令保存文件         |
 
 ## Q&A
@@ -221,8 +222,7 @@ vim ~/.vimrc.local
 [plug15]: https://github.com/ryanoasis/vim-devicons
 [plug16]: https://github.com/tpope/vim-repeat
 [plug17]: https://github.com/mhinz/vim-startify
-[plug18]: https://github.com/tomtom/tcomment_vim
-[color]: https://github.com/dracula/vim
+[color]: https://github.com/catppuccin/vim
 [issues2]: https://github.com/dofy/7th-vim/issues/2
 [issues3]: https://github.com/dofy/7th-vim/issues/3
 [neovim]: https://neovim.io/
